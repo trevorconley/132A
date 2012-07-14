@@ -1,0 +1,113 @@
+#page{
+	max-width:981px;
+	max-height:695px;
+}
+/*start top*/
+#top {
+	margin:5px 0px 0px 5px;
+	display:inline-block;
+	width:980px;
+	height:80px;
+}
+#top #file-menu{
+	float:left;
+	padding:2px;
+	width: 230px;
+	min-height:75px;
+	border: 1px solid #000;
+}
+#top #file-menu #file-buttons{
+	padding-left: 8px;
+}
+#top #wrapper{
+	padding-left: 4px;
+	display:table;
+}
+#top #controls-right{
+	display:table-cell;
+	vertical-align: middle;
+	padding:2px 2px 2px 40px;
+	width:730px;
+	height:75px;
+	border: 1px solid #000;
+
+}
+/*end top*/
+
+#bottom{
+	margin-left:5px;
+	margin-top:-2px;
+	width:981px;
+}
+
+/*start widgets area*/
+#bottom #widget-container{
+	float:left;
+	padding:2px;
+	border: 1px solid #000;
+	height: 618px;
+	width: 230px;
+}
+
+#bottom #widget-container #widget-option{
+	padding-left: 5px;
+	padding-top:3px;
+}
+
+#bottom #widget-container #widget-option #search-box{
+	float:right;
+	text-align: right;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	width:135px;
+	height:27px;
+}
+
+#bottom #widget-container #widgets{
+}
+#bottom #widget-container #widgets #widgets-table{
+    text-align:center;
+
+}
+
+#bottom #widget-container #widgets #widgets-table td{
+	width:111px;
+	height:80px;
+	text-align:center;
+	border: 1px solid #000;
+	background-color: #EEE9E9;
+}
+
+
+/*start user-frame*/
+#bottom #wire-area{
+	float:left;
+	margin-left:4px;
+	padding:3px;
+	border:1px solid #000;	
+	width:733px;
+	height:616px;
+}
+
+#bottom #wire-area #wire-menu{
+	height:35px;
+	background-color: #f0f0f0;	
+}
+#bottom #wire-area #wire-menu #pages{
+	margin-left: 3px;
+	margin-top:15px;
+	float:left;
+}
+#bottom #wire-area #wire-menu #text-options{
+	margin-top:8px;
+	float:right;
+}
+
+#bottom #wire-area #frame{
+	border: 1px solid #000;
+	height:580px;
+	background-color:#e0e0e0;
+}
+
+
+ 
