@@ -3,7 +3,7 @@
 body
 {
     background-color: white;
-    background-image: url("img/bg.png");    /* ensures header spans the entire screen horizontally */
+    background-image: url("../img/bg.png");    /* ensures header spans the entire screen horizontally */
     background-repeat: repeat-x;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -138,10 +138,15 @@ nav ul li:hover
 	height:355px;
 }
 #main #about #who-we-are{
+  display: inline;
 	padding:3px;
 }
+#main #about #who-we-are #picture{
+  margin-top:10px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
 #main #about #social{
-  padding-top:10px;
   padding-left:15px;
 }
 #main #right{
@@ -182,7 +187,7 @@ nav ul li:hover
   display: inline-block;
   vertical-align: middle;
 	text-align: center;
-  background-color: #020731;
+  background-image: url("../img/bg.png");    /* ensures header spans the entire screen horizontally */
 }
 
 /*****************Classes***********************/
