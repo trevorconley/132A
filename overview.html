@@ -1,55 +1,110 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="home.css">
-	<link href="css/lightbox.css" rel="stylesheet" />
-	<link rel="stylesheet" href="css/overview.css">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Overview</title>
-</head>
-<body>
-	<h1>Why are you here?</h1>
-	<div class = "three_columns features">
-		<div class = "feature">
-		<h2>Plan Ahead</h2>
-		<p>Are you a frustrated Web Developer that spends an obscene amount of time designing several different drafts before finally coming to a design you sort of like? </p>
+<html lang="en">
+    <head>	    
+    	<meta charset="utf-8">
+	    <title>
+			Home
+	    </title>
+	    <link rel="stylesheet" href="css/home.css">
+	    <link rel="stylesheet" href="css/overview.css">
+	    <link rel="stylesheet" href="css/lightbox.css">
+	    <script src="js/jquery172.js" type="text/javascript"></script>
+	    <script src="js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/lightbox.js"></script>
+		<script type="text/javascript">
+			function prev_img(){
+				$("#screen").attr("src", "http://placehold.it/446x280");
+			}
+			function next_img(){
+				$("#screen").attr("src", "img/changed.png");
+			}
+		</script>
+    </head>
+
+
+    <body>
+	<div id="fb-root"></div>
+	    <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+	    }(document, 'script', 'facebook-jssdk'));</script>
+    	<div id="page">
+	    	<div id = "top">
+		    	<figure id="logo">
+		    		<img src="img/logo.png">
+		    	</figure>
+		        <nav>
+				<ul class="nav-tabs">
+					<li class="active"><a href="home.html">home</a></li>
+				  	<li><a href="overview.html">overview</a></li>
+				  	<li><a href="features.html">features</a></li>
+					<li><a href="#">contact us</a></li>
+				</ul>
+				</nav>		    	
+		    </div>
+
+	    	<div id ="main">
+	    		<div id="overview">
+		    		<h2>Why are you here?</h2>
+		    		<div class = "three_columns features">
+						<div class = "feature">
+							<h3>Plan Ahead</h3>
+							<p>Are you a frustrated Web Developer that spends an obscene amount of time designing several different drafts before finally coming to a design you sort of like? </p>
+						</div>
+						<div class = "feature">
+							<h2>&nbsp; </h2>
+							<p>Then a wireframe tool is for you! Cut your time dramatically by creating a mockup design of your website. Once you have the design, then you can move forward to implementing the design how you wish.</p>
+						</div>
+					</div>
+					<hr/ >
+					<h2>Why use a Wireframe tool?</h2>
+					<div class = "three_columns features">
+						<div class = "feature">
+							<h3>Cost</h3>
+							<p>Design the layout before investing resources.</p>
+						</div>
+						<div class = "feature">
+							<h3>Time</h3>
+							<p>Save time by having a plan before implementation.</p>
+						</div>
+						<div class = "feature">
+							<h3>Simple</h3>
+							<p>Focus solely on the structural design before adding color and content.</p>
+						</div>
+					</div>
+					<hr />
+					<h2>Why GeekOps Wireframe tool?</h2>
+					<div class = "three_columns features">
+						<div class = "feature">
+							<p>GeekOps Wireframe is a cost and time efficient web-based tool that has a simplistic and intuitive user interface that optimizes the Web Developer's experience.</p>
+						</div>
+						<div class = "feature">		
+							<ul>
+								<li>No pesky pop-up windows</li>
+								<li>No confusing pathways to the actual wireframe tool</li>
+								<li>No unecessary and complicated features</li>
+								<li>No mysteries in how to operate the tool</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+		    <div id ="footer">
+		    	<a href="#">Site Map</a> |
+		    	<a href="#">Privacy Policy</a> |
+		    	<a href="#">Terms of Use</a> |
+		    	<a href="#">@Wireframe Geeks</a>
+
+		    </div>
 		</div>
-		<div class = "feature">
-		<h1>&nbsp; </h1>
-		<p>Then a wireframe tool is for you! Cut your time dramatically by creating a mockup design of your website. Once you have the design, then you can move forward to implementing the design how you wish.</p>
-		</div>
-	</div>
-<hr />
-	<h1>Why use a Wireframe tool?</h1>
-	<div class = "three_columns features">
-		<div class = "feature">
-		<h2>Cost</h2>
-		<p>Design the layout before investing resources.</p>
-		</div>
-		<div class = "feature">
-		<h2>Time</h2>
-		<p>Save time by having a plan before implementation.</p>
-		</div>
-		<div class = "feature">
-		<h2>Simple</h2>
-		<p>Focus solely on the structural design before adding color and content.</p>
-		</div>
-	</div>
-<hr />
-	<h1>Why GeekOps Wireframe tool?</h1>
-	<div class = "three_columns features">
-		<div class = "feature">
-		<p>GeekOps Wireframe is a cost and time efficient web-based tool that has a simplistic and intuitive user interface that optimizes the Web Developer's experience.</p>
-		</div>
-		<div class = "feature">		
-		<ul>
-		<li>No pesky pop-up windows</li>
-		<li>No confusing pathways to the actual wireframe tool</li>
-		<li>No unecessary and complicated features</li>
-		<li>No mysteries in how to operate the tool</li>
-		</ul>
-		</div>
-	</div>	
-</body>
-</html>
+    </body>
+
+ </html>
+
+
+
+
+

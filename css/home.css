@@ -1,9 +1,27 @@
+*{margin:0px; padding: 0px}
+
 body
 {
     background-color: white;
-    background-image: url("../img/bg.png");    /* ensures header spans the entire screen horizontally */
+    background-image: url("img/bg.png");    /* ensures header spans the entire screen horizontally */
     background-repeat: repeat-x;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    background-color: #ffffff;
 }
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
 #page {
     width:980px;
     height:695px;
@@ -47,7 +65,7 @@ body
 
 #top #logo
 {
-    background-image: url("../img/logo.png");         /* full logo */
+    background-image: url("img/logo.png");         /* full logo */
     width: 206px;                                  
     height: 58px;
     float: left;                                  /* push the logo the left */
@@ -111,24 +129,32 @@ nav ul li:hover
 #main #about{
 	float:left;
 	margin-left:20px;
-	margin-top:33px;
 	width:460px;
 	height:355px;
-	background-color: #fff;
-	overflow-y:scroll;
 }
-#main #who-we-are{
+#main #about #who-we-are{
 	padding:3px;
 }
+#main #about #social{
+  padding-top:10px;
+  padding-left:15px;
+}
 #main #right{
-	margin-top:33px;
 	margin-right:20px;
 	float:right;
 	width: 460px;
 	height:355px;
-	background-color:white;
 }
-#main #right #screens{
+#main #right #screens {
+	display: block;
+	max-width: 100%;
+  margin-top:20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main #right #screens #screen{
+	max-width: 100%;
+	max-height: 100%;
 }
 #main #right #clicks {
 	width:360px;
@@ -143,9 +169,60 @@ nav ul li:hover
 	margin: 0px auto;
 	overflow: hidden;
 	padding-left: 110px;
-	margin-top:-15px;
 }
+
 #page #footer{
 	width:100%;
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
 	text-align: center;
+  background-color: #020731;
 }
+
+/*****************Classes***********************/
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+ }
+
+
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+

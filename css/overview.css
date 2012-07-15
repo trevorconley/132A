@@ -2,7 +2,11 @@
 	
 }
 
+#overview{
+	padding:4px;
+}
 .three_columns {
+	padding:8px;
 	position: relative;
 	width: 960;
 	margin: 0px auto;
@@ -22,4 +26,8 @@
 	font-size: 15px;
 	color: gray;
 	margin-bottom: 10px;
+}
+
+#features{
+	padding-left:20px;
 }
