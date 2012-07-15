@@ -47,7 +47,7 @@ body
 
 #top #logo
 {
-    background-image: url('img/logo.png');         /* full logo */
+    background-image: url("img/logo.png");         /* full logo */
     width: 206px;                                  
     height: 58px;
     float: left;                                  /* push the logo the left */
