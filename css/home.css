@@ -112,6 +112,11 @@ nav ul li:hover
 {
 	color: white;
 }
+#top a:active,
+#top a:visited
+{
+  color: white;
+}
 #top a:hover
 {
 	color: white;
