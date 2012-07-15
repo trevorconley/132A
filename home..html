@@ -2,110 +2,112 @@
 <html lang="en">
     <head>	    
     	<meta charset="utf-8">
-	    <link rel="icon" href="favicon.ico" type="image/x-icon">
-	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	    
 	    <title>
-			GeekOps
+			Home
 	    </title>
 	    <link rel="stylesheet" href="css/bootstrap.css">
-	    <link rel="stylesheet" href="css/home.css">
-	    <link rel="stylesheet" href="css/lightbox.css">
+	    <link rel="stylesheet" href="home.css">
+	    <link href="css/lightbox.css" rel="stylesheet" />
 	    <script src="js/jquery172.js" type="text/javascript"></script>
 	    <script src="js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/lightbox.js"></script>
+		<script type="text/javascript">
+			function prev_img(){
+				$("#screen").attr("src", "http://placehold.it/450x280");
+			}
+			function next_img(){
+				$("#screen").attr("src", "img/changed.png");
+			}
+		</script>
     </head>
 
 
     <body>
-	<div id="fb-root"></div>
-	    <script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
-		fjs.parentNode.insertBefore(js, fjs);
-	    }(document, 'script', 'facebook-jssdk'));</script>
     	<div id="page">
 	    	<div id = "top">
 		    	<figure id="logo">
 		    	</figure>
-		        <nav>
-				<ul>
-					<li><a href="#">home</a></li>
-				  	<li><a href="overview.html">overview</a></li>
-				  	<li><a href="#">features</a></li>
-					<li><a href="#">contact us</a></li>
-				</ul>
-			</nav>		    	
+		    	<div id="search">
+		    	<form class="form-search">
+					<input type="text" class="input-medium search-query">
+					<button type="submit" class="btn btn-small">Search</button>
+				</form>
+				</div>		
 		    </div>
+		    <div id ="nav">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#">Home</a>
+				 	</li>
+				  	<li>
+				  		<a href="#">Get started</a>
+				  	</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>
+				</ul>
+			</div>
 
 	    	<div id ="main">
 		    	<article id ="about">
 		    		<div id ="who-we-are">
-				    <h2>Announcements</h2>
-				    
-					<!--Embedded Tweets-->
-					<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-					<script>
-					new TWTR.Widget({
-					  version: 2,
-					  type: 'profile',
-					  rpp: 10,
-					  interval: 30000,
-					  width: 300,
-					  height: 350,
-					  theme: {
-					    shell: {
-					      background: '#333333',
-					      color: '#ffffff'
-					    },
-					    tweets: {
-					      background: '#000000',
-					      color: '#ffffff',
-					      links: '#4aed05'
-					    }
-					  },
-					  features: {
-					    scrollbar: true,
-					    loop: false,
-					    live: false,
-					    behavior: 'all'
-					  }
-					}).render().setUser('Geek_Ops').start();
-					</script>
-					
-					
+		    			<h3>Meet Wireframer, our rapid mockup tool:</h3>
+		    			<ul>
+		    				<li>
+		    					Our technology makes it easy for you to create and share mockups of your website or application.
+		    				</li>
+		    				<li>
+		    					Wireframer features
+		    					<ul>
+		    						<li>Userfriendly interface</li>
+		    						<li>Choose from our sophisticated library predesigned diagrams</li>
+		    						<li>All the editing functions you need</li>
+		    						<li>Export your mockup as image or XML</li>
+		    					</ul>
+
+		    				<li>
+		    					Who should use Wireframer?
+		    						<ul>
+		    							<li>Web designers</li>
+		    							<li>Mobile developers</li>
+		    							<li>Developers</li>
+		    						</ul>
+		    				</li>
+		    				<li>
+		    					Why Wireframer?
+		    					<ul>
+		    						<li>Super easy wireframing</li>
+		    						<li>We turn your ideas into designs</li>
+		    						<li>Increased productivity with group collaborations</li>
+		    					</ul>
+		    				</li>
+		    			</ul>
 		    		</div>
 		    	</article>
 		    	<div id="right">
 			    	<figure id ="screens">
-				    <img id="screen" src="img/homepage.png" alt="Fullscreen" height="350" width="500">
+						<a href="img/glyphicons-halflings.png" rel="lightbox" class="thumbnail">
+						    <img id="screen" src="http://placehold.it/450x280" alt="Fullscreen">
+						</a>
 			    	</figure>
-			    	<div id="overview">
-			    		<button class="btn btn-large" ONCLICK="window.location.href='overview.html'">Get an Overview</button>
+			    	<div id="clicks">
+				    	<button id="btn1" class="btn btn-mini" onclick ="prev_img()"> &lt;&lt; </button>
+				    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    	<button id="btn2" class="btn btn-mini" onclick ="next_img()"> &gt;&gt; </button>
+				    </div>
+			    	<div id="started">
+			    		<button class="btn btn-large">Get Started</button>
 			    	</div>
-			    </div>	
-		
+			    </div>
 		    </div>
 
 		    <div id ="footer">
 		    	<a href="#">Site Map</a> |
 		    	<a href="#">Privacy Policy</a> |
-		    	<a href="#">Terms of Use</a> 
-		    	<h6>&copy; GeekOps</h6>
-			
+		    	<a href="#">Terms of Use</a> |
+		    	<a href="#">@Wireframe Geeks</a>
 		    </div>
-		    
-		    <div id ="likefollow">
-			<!--Like us on Facebook-->
-			<div class="fb-like" data-href="http://www.facebook.com/GeekOps" data-send="false" data-layout="button_count" data-width="15" data-show-faces="true" data-font="verdana"></div>
-			
-			<!--Follow us on Twitter-->
-			<a href="https://twitter.com/Geek_Ops" class="twitter-follow-button" data-show-count="false">Follow @Geek_Ops</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
-			
-		    </div>
-		    
 		</div>
     </body>
 
