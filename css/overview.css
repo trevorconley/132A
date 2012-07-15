@@ -1,0 +1,25 @@
+.features {
+	
+}
+
+.three_columns {
+	position: relative;
+	width: 960;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.three_columns .feature {
+	width: 280px;
+	margin-left: 20px;
+	margin-right: 20px;
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+
+.three_columns .feature p {
+	font-size: 15px;
+	color: gray;
+	margin-bottom: 10px;
+}
