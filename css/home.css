@@ -104,12 +104,13 @@ nav ul li:hover
     border-radius: 20px;                         /* Rounded borders */
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
-    background-color: grey;                       /* Changes the background of the button to grey */
+    background-color: bebebe;               /* Changes the background of the button to grey */
 }
 
 #top a:link, #top a:active, #top a:hover, #top a:visited
 {
 	color: white;                            /* Makes the main menu links white at all times */
+  text-decoration: none;
 }
 
 /*#top a:active,
@@ -130,6 +131,7 @@ nav ul li:hover
 	width:980px;
 	height:550px;
 	background-color: #DCDCDC;
+  background-image: url("../img/gradientBgForMain.png");
 }
 #main #about{
 	float:left;
