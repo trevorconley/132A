@@ -186,6 +186,20 @@ nav ul li:hover
 	text-align: center;
   background-color: #020731;
 }
+.left
+{
+  float: right;
+  padding: 1em;
+}
+.right
+{
+  float: left;
+  padding: 1em;
+}
+.left img
+{
+  padding-right: 10px;
+}
 
 /*****************Classes***********************/
 
