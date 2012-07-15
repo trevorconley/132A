@@ -3,7 +3,7 @@
 body
 {
     background-color: white;
-    background-image: url("img/bg.png");    /* ensures header spans the entire screen horizontally */
+    background-image: url("../img/bg.png");    /* ensures header spans the entire screen horizontally */
     background-repeat: repeat-x;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -65,7 +65,7 @@ a:hover {
 
 #top #logo
 {
-    background-image: url("img/logo.png");         /* full logo */
+    background-image: url("../img/logo.png");         /* full logo */
     width: 206px;                                  
     height: 58px;
     float: left;                                  /* push the logo the left */
@@ -79,7 +79,7 @@ nav
 }
 nav ul
 {
-   list-style-type: none;
+   list-style-type: none;                         /* gets rid of the bullets */
 }
 nav ul li 
 {
@@ -87,7 +87,7 @@ nav ul li
     margin: 10px;
     display: inline;
     padding: 12px;
-    border-radius: 20px; 
+    border-radius: 20px;                         /* makes rounded corners */
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
     border: 0px solid #800000;
@@ -101,18 +101,18 @@ nav ul li:hover
     margin: 10px;
     display: inline;
     padding: 12px;
-    border-radius: 20px; 
+    border-radius: 20px;                         /* Rounded borders */
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
-    border: 0px solid #800000;
-    background-color: #2b0101;
+    background-color: grey;                       /* Changes the background of the button to grey */
 }
 
-#top a:link
+#top a:link, #top a:active, #top a:hover, #top a:visited
 {
-	color: white;
+	color: white;                            /* Makes the main menu links white at all times */
 }
-#top a:active,
+
+/*#top a:active,
 #top a:visited
 {
   color: white;
@@ -121,7 +121,7 @@ nav ul li:hover
 {
 	color: white;
 	text-decoration: none;
-}
+}*/
 
 
 
