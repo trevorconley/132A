@@ -17,14 +17,9 @@
 	border-radius: 25px 10px / 10px 25px;
 }
 
-#top #search{
-	padding-top: 28px;
-	padding-right:25px;
-	float:right;
-}
 #page #nav{
 	clear:both;
-	width: 250px;
+	width: 400px;
 	height:35px;
 }
 #page #main{
