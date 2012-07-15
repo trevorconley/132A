@@ -104,7 +104,7 @@ nav ul li:hover
     border-radius: 20px;                         /* Rounded borders */
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
-    background-color: bebebe;               /* Changes the background of the button to grey */
+    background-color: #0073cc;               /* Changes the background of the button to grey */
 }
 
 #top a:link, #top a:active, #top a:hover, #top a:visited
