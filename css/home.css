@@ -1,7 +1,7 @@
 body
 {
     background-color: white;
-    background-image: url("img/bg.png");    /* ensures header spans the entire screen horizontally */
+    background-image: url("../img/bg.png");    /* ensures header spans the entire screen horizontally */
     background-repeat: repeat-x;
 }
 #page {
@@ -47,7 +47,7 @@ body
 
 #top #logo
 {
-    background-image: url("img/logo.png");         /* full logo */
+    background-image: url("../img/logo.png");         /* full logo */
     width: 206px;                                  
     height: 58px;
     float: left;                                  /* push the logo the left */
