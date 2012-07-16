@@ -275,9 +275,13 @@ nav ul li:hover
  hr { 
   margin: 1em;
  }
- #overide h3
+ #overview h3
  {
-  background-color: #bbbbbb;
+   color: #4d4c4c;
+ }
+ #overview li
+ {
+   background: url("check.png") left center no-repeat;
  }
  /*****************Classes***********************/
 
