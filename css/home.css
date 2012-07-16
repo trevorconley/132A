@@ -251,7 +251,7 @@ nav ul li:hover
  #contact_us td, #contact_us p {
    padding: 5px;
  }
- #contact_us h3 {
+ #contact_us h3, #overview h2 {
     padding-bottom: 10px;
     color:  #140387;
  }
@@ -271,6 +271,10 @@ nav ul li:hover
  #contact_us .tableRowAlt
  {
     background-color: #e5e5e5;
+ }
+ #overview
+ {
+   padding: 2em;
  }
  /*****************Classes***********************/
 
