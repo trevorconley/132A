@@ -102,6 +102,7 @@ nav ul li:hover
 	width:980px;
 	height:550px;
 	background-color: #DCDCDC;
+  padding: 1em;
 }
 #main #about{
 	float:left;
@@ -278,10 +279,6 @@ nav ul li:hover
  #overview h3
  {
    color: #4d4c4c;
- }
- #overview li
- {
-   background: url("check.png") left center no-repeat;
  }
  /*****************Classes***********************/
 
