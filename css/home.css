@@ -135,24 +135,27 @@ nav ul li:hover
   margin-top:20px;
 	margin-right: auto;
 	margin-left: auto;
+
 }
 #main #right #screens #screen{
 	max-width: 100%;
 	max-height: 100%;
+  border:1spx solid #f0f0f0;
+  -webkit-box-shadow: 0px 0px 18px rgba(50, 50, 50, 1);
+  -moz-box-shadow:    0px 0px 18px rgba(50, 50, 50, 1);
+  box-shadow:         0px 0px 18px rgba(50, 50, 50, 1);
 }
-#main #right #clicks {
-	width:360px;
-	margin-top:15px;
-	margin:0px auto;
-}
-#main #right #clicks #btn2{
-	float:right;
-}
+
 #main #right #started{
 	width: 50%;
 	margin: 0px auto;
+  padding-top: 27px;
 	overflow: hidden;
-	padding-left: 110px;
+	padding-left: 30px;
+}
+#main #right #copyright{
+  font-size: 1.1em;
+  padding:130px 0px 0px 400px;
 }
 
 
@@ -229,7 +232,7 @@ nav ul li:hover
 
 .btn {
   display: inline-block;
-  padding: 10px 25px 10px;
+  padding: 20px 58px 20px;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 22px;
