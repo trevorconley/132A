@@ -256,6 +256,19 @@ nav ul li:hover
  {
     padding-top: 10px;
  }
+ #contact_us .tableHeading
+ {
+    background-color: #a5a5a5;
+    font-weight: bolder;
+ }
+ #contact_us .tableRow
+ {
+    background-color: #cecece
+ }
+ #contact_us .tableRowAlt
+ {
+    background-color: #e5e5e5;
+ }
  /*****************Classes***********************/
 
 .btn {
