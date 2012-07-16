@@ -132,7 +132,7 @@ nav ul li:hover
 #main #right #screens {
 	display: block;
 	max-width: 100%;
-  margin-top:20px;
+  padding-top:30px;
 	margin-right: auto;
 	margin-left: auto;
 
