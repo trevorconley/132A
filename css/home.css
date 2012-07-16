@@ -245,7 +245,16 @@ nav ul li:hover
  {
    width: 45%;
  }
-
+ #contact_us td, #contact_us p {
+   padding: 5px;
+ }
+ #contact_us h3 {
+    padding-bottom: 10px;
+ }
+ #contact_us .padTop 
+ {
+    padding-top: 10px;
+ }
  /*****************Classes***********************/
 
 .btn {
