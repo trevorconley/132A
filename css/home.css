@@ -344,6 +344,7 @@ nav ul li:hover
   background: #020731;
 
 }
+
 .black:hover {
   color:white;
   background: #020731;
@@ -356,6 +357,13 @@ nav ul li:hover
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#444));
   background: -moz-linear-gradient(top,  #000,  #444);
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#666666');
+}
+.selected{
+  color:white;
+  background: #020731;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1F287A), to(#08104D));
+  background: -moz-linear-gradient(top,  #444,  #020731);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#020731');
 }
 
 .sml{
