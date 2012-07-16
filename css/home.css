@@ -283,6 +283,11 @@ nav ul li:hover
  {
    color: #4d4c4c;
  }
+#overview li
+{
+  list-style-image: url("../img/check.png");
+}
+
  /*****************Classes***********************/
 
 .btn {
