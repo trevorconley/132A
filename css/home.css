@@ -200,6 +200,16 @@ nav ul li:hover
 {
   padding-right: 10px;
 }
+.right a:visited, .right a:link, .right a:active
+{
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+.right a:hover
+{
+  color: #0073cc;
+}
 
 /*****************Classes***********************/
 
