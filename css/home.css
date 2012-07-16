@@ -223,9 +223,30 @@ nav ul li:hover
   padding: 1em;                                   /* so the text isn't right up against the edges! */
  }
  input, textarea{
-  display: block;
+  border-radius: 20px; 
+  -moz-border-radius: 20px; 
+  -webkit-border-radius: 20px; 
+   border: 0;
+   padding: 7px;
  }
-/*****************Classes***********************/
+ .formField
+ {
+  display: block;
+  padding: 7px;
+ }
+ textarea
+ {
+   display: block;
+   width: 375px;
+   height: 250px;
+   padding: 20px;
+ }
+ #contact_us .left
+ {
+   width: 45%;
+ }
+
+ /*****************Classes***********************/
 
 .btn {
   display: inline-block;
