@@ -102,7 +102,6 @@ nav ul li:hover
 	width:980px;
 	height:550px;
 	background-color: #DCDCDC;
-  padding: 1em;
 }
 #main #about{
 	float:left;
@@ -159,6 +158,10 @@ nav ul li:hover
   padding:130px 0px 0px 400px;
 }
 
+#main #overview
+{
+  padding: 1em;
+}
 
 /****************************************************************************************************
  *                             FOOTER 
