@@ -141,9 +141,9 @@ nav ul li:hover
 	max-width: 100%;
 	max-height: 100%;
   border:1spx solid #f0f0f0;
-  -webkit-box-shadow: 0px 0px 18px rgba(50, 50, 50, 1);
-  -moz-box-shadow:    0px 0px 18px rgba(50, 50, 50, 1);
-  box-shadow:         0px 0px 18px rgba(50, 50, 50, 1);
+  -webkit-box-shadow: 0px 0px 23px rgba(50, 50, 50, .4);
+  -moz-box-shadow:    0px 0px 23px rgba(50, 50, 50, .4);
+  box-shadow:         0px 0px 23px rgba(50, 50, 50, .4);
 }
 
 #main #right #started{
