@@ -91,7 +91,6 @@ nav ul li
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
     background-color: #0d0656;
-
 }
 
 nav ul li:hover
@@ -120,8 +119,6 @@ nav ul li:hover
 	color: white;
 	text-decoration: none;
 }
-
-
 
 
 #page #main{
@@ -198,6 +195,19 @@ nav ul li:hover
 .left img{padding-right: 10px;}
 .right a:visited, .right a:link, .right a:active{color: white;text-decoration: none;font-size: 12px;}
 .right a:hover{color: #0073cc;}
+
+#findOutMore
+{
+  width: 262px;
+  margin-left: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+#findOutMore a:hover
+{
+   color: white;
+   text-decoration: none;  
+}
 
 /*****************Classes***********************/
 
