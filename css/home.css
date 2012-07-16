@@ -128,7 +128,8 @@ nav ul li:hover
 	width:980px;
 	height:550px;
 	background-color: #DCDCDC;
-  background-image: url("gradientBgForMain.png");  
+  background-image: url("../img/gradientBgForMain.png");  
+
 }
 #main #about{
 	float:left;
