@@ -226,9 +226,53 @@ nav ul li:hover
   padding: 1em;                                   /* so the text isn't right up against the edges! */
  }
  input, textarea{
-  display: block;
+  border-radius: 20px; 
+  -moz-border-radius: 20px; 
+  -webkit-border-radius: 20px; 
+   border: 0;
+   padding: 7px;
  }
-/*****************Classes***********************/
+ .formField
+ {
+  display: block;
+  padding: 7px;
+ }
+ textarea
+ {
+   display: block;
+   width: 375px;
+   height: 250px;
+   padding: 20px;
+ }
+ #contact_us .left
+ {
+   width: 45%;
+ }
+ #contact_us td, #contact_us p {
+   padding: 5px;
+ }
+ #contact_us h3 {
+    padding-bottom: 10px;
+    color:  #140387;
+ }
+ #contact_us .padTop 
+ {
+    padding-top: 10px;
+ }
+ #contact_us .tableHeading
+ {
+    background-color: #a5a5a5;
+    font-weight: bolder;
+ }
+ #contact_us .tableRow
+ {
+    background-color: #cecece
+ }
+ #contact_us .tableRowAlt
+ {
+    background-color: #e5e5e5;
+ }
+ /*****************Classes***********************/
 
 .btn {
   display: inline-block;
