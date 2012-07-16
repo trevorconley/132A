@@ -65,7 +65,7 @@ a:hover {
 
 #top #logo
 {
-    background-image: url("img/logo.png");         /* full logo */
+    background-image: url("../img/logo.png");         /* full logo */
     width: 206px;                                  
     height: 58px;
     float: left;                                  /* push the logo the left */
@@ -90,7 +90,6 @@ nav ul li
     border-radius: 20px; 
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
-    border: 0px solid #800000;
     background-color: #0d0656;
 
 }
@@ -104,8 +103,7 @@ nav ul li:hover
     border-radius: 20px; 
     -moz-border-radius: 20px; 
     -webkit-border-radius: 20px; 
-    border: 0px solid #800000;
-    background-color: #2b0101;
+    background-color: ##0088cc;
 }
 
 #top a:link
@@ -130,6 +128,7 @@ nav ul li:hover
 	width:980px;
 	height:550px;
 	background-color: #DCDCDC;
+  background-image: url("gradientBgForMain.png");  
 }
 #main #about{
 	float:left;
