@@ -193,6 +193,19 @@ nav ul li:hover
 }
 #page #footer a{
   color:white;
+.left
+{
+  float: right;
+  padding: 1em;
+}
+.right
+{
+  float: left;
+  padding: 1em;
+}
+.left img
+{
+  padding-right: 10px;
 }
 
 /*****************Classes***********************/
