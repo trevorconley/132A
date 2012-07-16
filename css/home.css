@@ -255,7 +255,7 @@ nav ul li:hover
  #contact_us td, #contact_us p {
    padding: 5px;
  }
- #contact_us h3, #overview h2 {
+ #contact_us h3, #overview h2, #main h2 {
     padding-bottom: 10px;
     color:  #140387;
  }
