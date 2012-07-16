@@ -143,7 +143,7 @@ nav ul li:hover
 	padding:3px;
 }
 #main #about #picture{
-  padding-top: 50px;
+  padding-top: 80px;
   padding-left: 20px;
   text-align: center;
 
@@ -194,6 +194,11 @@ nav ul li:hover
 #page #footer a{
   color:white;
 }
+.left{float: right;padding: 1em;}
+.right{float: left;padding: 1em;}
+.left img{padding-right: 10px;}
+.right a:visited, .right a:link, .right a:active{color: white;text-decoration: none;font-size: 12px;}
+.right a:hover{color: #0073cc;}
 
 /*****************Classes***********************/
 
