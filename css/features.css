@@ -3,13 +3,11 @@
 	line-height: 23px
 }
 #heading{
-	padding-top:10px;
 	text-align: center;
 }
+
 .list{
 	padding-left: 40px;
 }
 #message{
-	margin-top:78px;
-	margin-left:650px;
 }
