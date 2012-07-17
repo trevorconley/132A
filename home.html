@@ -40,18 +40,37 @@
 		    	<figure id="logo">
 		    		<img src="img/logo.png" alt="GeekOps">
 		    	</figure>
-		        <nav id="minh-nav">
+		        <div id="top-nav">
 					<a href="home.html" class="button black selected sml">Home</a>  
 					<a href="overview.html" class="button black sml">Overview</a> 
 					<a href="features.html" class="button black sml">Features</a> 
 					<a href="contact.html" class="button black sml">Contact Us</a>
-				</nav>		    	
+				</div>		    	
 		    </div>
 		</div>
     	<div id ="main">
-	    	<div id ="about">
-	    		<div id ="who-we-are">
-			    <h2>Announcements</h2>
+    		<div id ="headline"><h1>Our Latest Product</h1></div>
+    		<div class="container">
+	    		<div id ="about">
+	    			<p class="product"><strong>WireFramer</strong></p>
+	    			<figure id ="screens">
+						<a href="javascript:open_tool()" >
+						    <img id="screen" src="img/mockup.png" alt="Fullscreen">
+						</a>
+			    	</figure>
+	    		</div>
+		    	<div id="right">
+		    		<p class="description">Wireframer is a professional design mock up tool designed for developers of any levels. Our library of classic icons and mobile templates help you speed up UI development. Share and collaborate designs in groups, and export to XML or PNG when you've finished. </p>
+			    	<div id="started">
+			    		<img src="img/simplicity.png" alt="Simplicity makes it easy">
+			    		<button class="button orange" onclick="open_tool()">Get Started</button>
+			    	</div>
+			    </div>	
+			</div>
+			<div id ="social">
+	
+				<div id="twitter">
+					<h2>Latest Feeds</h2>
 					<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 					<script>
 					new TWTR.Widget({
@@ -60,7 +79,7 @@
 					  rpp: 5,
 					  interval: 30000,
 					  width: 440,
-					  height: 300,
+					  height: 250,
 					  theme: {
 					    shell: {
 					      background: '#060047',
@@ -80,28 +99,9 @@
 					  }
 					}).render().setUser('Geek_Ops').start();
 					</script>
-	    		</div>
-				<div id="social">
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
-				<div id="findOutMore">
-				    <img src="img/simplicity.png" alt="Simplicity makes it easy">
-				    <a href="overview.html">find out more</a>
-			    </div>
-	    	</div>
-	    	<div id="right">
-		    	<figure id ="screens">
-					<a href="javascript:open_tool()" >
-					    <img id="screen" src="img/mockup.png" alt="Fullscreen">
-					</a>
-		    	</figure>
-	
-		    	<div id="started">
-		    		<button class="button orange" onclick="open_tool()">Get Started</button>
-		    	</div>
-
-		    </div>	
-
+			</div>	
 	    </div>
         <div id="footerWrapper">
 	       <div id ="footer">
