@@ -1,9 +1,8 @@
 body{
-	height: 100%;
 	background: rgba(220, 240, 247,.5);
 }
 #top{
-	min-width: 965px;
+	min-width: 970px;
 	height: 45px;
 	-moz-box-shadow: 10px 10px 5px #888;
 	-webkit-box-shadow: 10px 10px 5px #888;
@@ -31,15 +30,14 @@ body{
 	text-align: center;
 }
 #top #toolbar-wrap #toolbar{
-	width: 100%;
+	width: 760px;
 	margin: 0px auto;
 }
 
 /****************************************MIDDLE***************************/
 #middle{
-	min-width: 965px;
+	min-width: 970px;
 	height: 45px;
-	margin-top:5px;
 	background: #999;
 }
 #middle #category{
@@ -90,7 +88,7 @@ body{
 
 /************************BOTTOM*****************************/
 #bottom{
-	min-width: 965px;
+	min-width: 970px;
 	min-height: 500px;
 }
 #bottom #widgets{
@@ -104,10 +102,9 @@ body{
 	min-width: 760px;
 	min-height: 500px;
 	vertical-align: top;
+	box-sizing: border-box; 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;    
-	box-sizing: border-box; 
-	padding:10px;
 }
 #bottom #canvas-wrap #canvas{
 	width: 90%;
