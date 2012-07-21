@@ -9,7 +9,9 @@
 	    <link rel="stylesheet" href="css/wireframe.css" />	    
 	    <script src="js/jquery172.js" type="text/javascript"></script>
 	    <script src="js/bootstrap.js" type="text/javascript"></script>
+	    <script src="js/minh.js" type="text/javascript"></script>
 	    <script>
+
 	    	window.onresize=function(){
 	    		var top = document.getElementById("top");
 	    		var toolbar_wrap = document.getElementById("toolbar-wrap");
@@ -19,14 +21,15 @@
 	    		var canvas_wrap = document.getElementById("canvas-wrap");
 	    		var width = window.innerWidth;
 	    		var widgets = document.getElementById("widgets");
+	    		var canvas=document.getElementById("canvas");
 
 	    		top.style.width = width +"px";
-	    		toolbar_wrap.style.width = width - 210 +"px";
+	    		toolbar_wrap.style.width = width - 250 +"px";
 	    		middle.style.width = width +"px";
-	    		options_wrap.style.width = width - 210 +"px";
+	    		options_wrap.style.width = width - 250 +"px";
 	    		bottom.style.width = width +"px";
 	    		bottom.style.height = window.innerHeight-115 + "px";
-	    		canvas_wrap.style.width = width - 210 +"px";
+	    		canvas_wrap.style.width = width - 250 +"px";
 	    		canvas_wrap.style.height = window.innerHeight-115+"px"
 	    		widgets.style.height = window.innerHeight-115+"px";
 	    	}
@@ -39,16 +42,18 @@
 	    		var canvas_wrap = document.getElementById("canvas-wrap");
 	    		var width = window.innerWidth;
 	    		var widgets = document.getElementById("widgets");
+	    		var canvas=document.getElementById("canvas");
 
 	    		top.style.width = width +"px";
-	    		toolbar_wrap.style.width = width - 210 +"px";
+	    		toolbar_wrap.style.width = width - 250 +"px";
 	    		middle.style.width = width +"px";
-	    		options_wrap.style.width = width - 210 +"px";
+	    		options_wrap.style.width = width - 250 +"px";
 	    		bottom.style.width = width +"px";
 	    		bottom.style.height = window.innerHeight-115 + "px";
-	    		canvas_wrap.style.width = width - 210 +"px";
+	    		canvas_wrap.style.width = width - 250 +"px";
 	    		canvas_wrap.style.height = window.innerHeight-115+"px"
 	    		widgets.style.height = window.innerHeight-115+"px";
+
 	    	}
 
 	    </script>
@@ -123,10 +128,12 @@
 		</div>
 		<div id="options">
 			<div id="page-tab">
-				<span class="label">Page1</span>
-		    	<span class="label">Page2</span>
-		    	<span class="label">+</span>
-		    	<span class="label">-</span>
+				<ul id="main-nav">
+				    <li class="current"><a href=".html">Page1</a></li>
+				    <li class="portfolio"><a href=".html">Page2</a></li>
+				    <li class="services"><a href=".html">New</a></li>
+				    <li class="about"><a href=".html">Delete</a></li>
+				</ul>
 			</div>
 			<div id="text-options">
 				<span style="color:#ababab">Text-options</span>
@@ -142,9 +149,11 @@
 	</div>
 	<div id="bottom">
 		<div id="widgets">
+			<img src="img/box1.png" alt="box1">
+			<img src="img/box2.png" alt="box1">
 		</div>
 		<div id="canvas-wrap">
-			<div id="canvas">asdsd
+			<div id="canvas">
 			</div>
 		</div>
 	</div>
