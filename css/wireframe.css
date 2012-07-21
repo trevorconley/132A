@@ -1,16 +1,26 @@
 body{
-
+	height: 100%;
+	background: rgba(220, 240, 247,.5);
 }
 #top{
 	min-width: 965px;
 	height: 45px;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 0 2px 2px #666;
+	background: #bbb;
+
 }
 #top #top-menu{
 	width: 200px;
 	height: 45px;
 	display: inline-block;
 	vertical-align: top;
-	background: #f0f0f0;
+	border-right: 2px solid #888;
+
+}
+#top #top-menu a{
+	color:black;
 }
 #top #toolbar-wrap{
 	min-width: 760px;
@@ -19,7 +29,6 @@ body{
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	background: #C88F53;
 }
 #top #toolbar-wrap #toolbar{
 	width: 100%;
@@ -30,19 +39,19 @@ body{
 #middle{
 	min-width: 965px;
 	height: 45px;
+	margin-top:5px;
+	background: #999;
 }
 #middle #category{
 	width: 200px;
 	height: 45px;
 	vertical-align: top;
 	display: inline-block;
-	background: #f0f0f0;
 }
 #middle #options{
 	min-width: 760px;
 	height: 45px;
 	display: inline-block;
-	background: orange;
 	line-height: 45px;
 }
 #middle #options #page-tab{
@@ -79,6 +88,37 @@ body{
 }
 
 
+/************************BOTTOM*****************************/
+#bottom{
+	min-width: 965px;
+	min-height: 500px;
+}
+#bottom #widgets{
+	display: inline-block;
+	width: 200px;
+	min-height: 500px;
+}
+
+#bottom #canvas-wrap{
+	display: inline-block;
+	min-width: 760px;
+	min-height: 500px;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	padding:10px;
+}
+#bottom #canvas-wrap #canvas{
+	width: 90%;
+	height: 90%;
+	background: white;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 0 0 5px 3px #888;
+}
+
+
 .button {
   display: inline-block;
   outline: none;
@@ -106,7 +146,7 @@ body{
   color: #fef4e9;
   border: solid 1px #da7c0c;
   background: #f78d1d;
-  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+  background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#B7AFA3));
   background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
 }
