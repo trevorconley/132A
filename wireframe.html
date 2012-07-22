@@ -56,6 +56,52 @@
 
 	    	}
 
+	    	function links(){
+	    		var b1 =document.getElementById("box1");
+	    		var b2 =document.getElementById("box2").src;
+	    		b1.src="img/box1a.png";
+	    		b2.src="img/box1b.png";
+	    		$('#box1').animate({
+				    opacity: 0.25
+				  }, 400, function() {
+				});
+	    		$('#box2').animate({
+				    opacity: 0.25
+				  }, 400, function() {
+				});
+				$('#box1').animate({
+				    opacity: 1
+				  }, 200, function() {
+				});
+
+				$('#box2').animate({
+				    opacity: 1
+				  }, 200, function() {
+				});
+	    	}
+	    	function navs(){
+	    		document.getElementById("box1").src="img/box2a.png";
+	    		document.getElementById("box2").src="img/box2b.png";
+	    		$('#box1').animate({
+				    opacity: 0.25
+				  }, 400, function() {
+				});
+	    		$('#box2').animate({
+				    opacity: 0.25
+				  }, 400, function() {
+				});
+				$('#box1').animate({
+				    opacity: 1
+				  }, 200, function() {
+				});
+
+				$('#box2').animate({
+				    opacity: 1
+				  }, 200, function() {
+				});
+	    	}
+
+
 	    </script>
 </head>
 
@@ -69,9 +115,9 @@
 	    				<b class="caret"></b>
 	    			</a>
 	    			<ul class="dropdown-menu">
-	    				<li><a href="http://www.google.com">A1</a></li>
-	    				<li><a href="http://www.google.com">A2</a></li>
-	    				<li><a href="http://www.google.com">A3</a></li>
+	    				<li><a href="http://www.google.com">Save</a></li>
+	    				<li><a href="http://www.google.com">Import</a></li>
+	    				<li><a href="http://www.google.com">Export(PNG or PDF)</a></li>
 	    			</ul>
 	    		</li>
 	    		<li class="dropdown" id="menu2">
@@ -80,9 +126,9 @@
 	    				<b class="caret"></b>
 	    			</a>
 	    			<ul class="dropdown-menu">
-	    				<li><a href="http://www.google.com">A1</a></li>
-	    				<li><a href="http://www.google.com">A2</a></li>
-	    				<li><a href="http://www.google.com">A3</a></li>
+	    				<li><a href="http://www.google.com">Undo</a></li>
+	    				<li><a href="http://www.google.com">Redo</a></li>
+	    				<li><a href="http://www.google.com">Cut</a></li>
 	    			</ul>
 	    		</li>
 	    		<li class="dropdown" id="menu3">
@@ -91,9 +137,9 @@
 	    				<b class="caret"></b>
 	    			</a>
 	    			<ul class="dropdown-menu">
-	    				<li><a href="http://www.google.com">A1</a></li>
-	    				<li><a href="http://www.google.com">A2</a></li>
-	    				<li><a href="http://www.google.com">A3</a></li>
+	    				<li><a href="http://www.google.com">Fullscreen</a></li>
+	    				<li><a href="http://www.google.com">Mobile</a></li>
+	    				<li><a href="http://www.google.com">Canvas</a></li>
 	    			</ul>
 	    		</li>
 	    	</ul>
@@ -118,9 +164,8 @@
 			<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><a href="http://www.google.com">A1</a></li>
-				<li><a href="http://www.google.com">A2</a></li>
-				<li><a href="http://www.google.com">A3</a></li>
+				<li><a href="javascript:links()">Links</a></li>
+				<li><a href="javascript:navs()">Navigation</a></li>
 			</ul>
 			<form>
 				<input type="search" id="search-box" placeholder="Search"></input>
@@ -149,8 +194,8 @@
 	</div>
 	<div id="bottom">
 		<div id="widgets">
-			<img src="img/box1.png" alt="box1">
-			<img src="img/box2.png" alt="box1">
+			<img id="box1" src="img/box1a.png" alt="box1">
+			<img id="box2" src="img/box1b.png" alt="box1">
 		</div>
 		<div id="canvas-wrap">
 			<div id="canvas">
