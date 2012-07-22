@@ -271,73 +271,10 @@ footer a:hover
 }
 
 /* Overview Page */
-#overviewWrapper
+#wireframesInner, #whyGeekOpsInner
 {
-	background-image: url("../img/overviewbg.png");
-	background-repeat: repeat-x;
-	font-family: 'Karla', sans-serif;
-	line-height: 20px;
-}
-
-#overviewWrapper ul li 
-{
-	margin-left: 30px;
-	list-style-image: url("../img/check.png");
-}
-#overviewWrapper ul
-{
-	margin-top: 10px;
-}
-
-#overview
-{
-	padding: 1em;
 	width: 800px;
 	margin: 0 auto;
-}
-
-#overview h2
-{
-	color: #545454;
-    text-shadow: 1px 1px 1px grey;
-    font-family: 'Crete Round', serif;
-    margin-bottom: 10px;
-    margin-top: 10px;	
-}
-#overview h3
-{
-	color: #6f6f6f;
-	margin-top: 10px;
-	margin-bottom: 10px;
-    text-shadow: 1px 1px 1px grey;
-	font-weight: bold;
-}
-
-#planAhead
-{
-	width: 45%;
-}
-#planAhead p
-{
-	margin-top: 10px;
-}
-#otherReasons
-{
-	width: 50%;
-}
-#whyWireframes
-{
-	padding-bottom: 1em;
-}
-
-#geekOpsLeft
-{
-	width: 45%;
-}
-
-#geekOpsRight
-{
-	width: 50%;
 }
 /* Misc Classes */
 .left
