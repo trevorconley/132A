@@ -79,6 +79,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	float: right;
 	padding-right: 45px;
 }
+
+#middle #options #Full_Toolbar{
+	height: 45px;
+	float: right;
+	padding-right: 45px;
+}
+
 #middle #category #btn-wrap{
 	float:right;
 	margin-top:-15px;
@@ -227,9 +234,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 
     font-weight: bold;
 }
-
-.class{
-	
-}
-
-
