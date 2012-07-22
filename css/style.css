@@ -201,6 +201,144 @@ footer a:hover
 	width: 800px;
 	margin: 0 auto;
 }
+
+/* Features */
+#featuresList 
+{
+	font-family: 'Karla', sans-serif;
+	line-height: 20px;
+	background-image: url("../img/hookbg.png");
+	background-color: #c6c6c6;
+	background-repeat: repeat-x;
+	border-bottom-color: #a9a9a9;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+#featuresWrapper h3
+{
+	color: white;
+    text-shadow: 1px 1px 2px grey;
+    font-family: 'Crete Round', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#featuresWrapper
+{
+	width: 800px;
+	margin: 0 auto;
+}
+#featuresWrapper .clear
+{
+	clear: both;
+	height: 25px;
+}
+#leftColTop
+{
+	width: 30%;
+	padding: 1em;
+}
+#rightColTop
+{
+	width: 30%;
+	padding: 1em;
+}
+#middleTop
+{
+	padding-top: 1em;
+	width: 30%;
+}
+#challenges
+{
+	background-image: url("../img/overviewbg.png");
+	padding: 1em;
+	font-family: 'Karla', sans-serif;
+	line-height: 20px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: white;
+}
+#challengesWrapper
+{
+	width: 800px;
+	margin: 0 auto;
+}
+#challengesWrapper h2
+{
+	color: #545454;
+    text-shadow: 1px 1px 2px grey;
+    font-family: 'Crete Round', serif;
+    margin-bottom: 10px;
+}
+
+/* Overview Page */
+#overviewWrapper
+{
+	background-image: url("../img/overviewbg.png");
+	background-repeat: repeat-x;
+	font-family: 'Karla', sans-serif;
+	line-height: 20px;
+}
+
+#overviewWrapper ul li 
+{
+	margin-left: 30px;
+	list-style-image: url("../img/check.png");
+}
+#overviewWrapper ul
+{
+	margin-top: 10px;
+}
+
+#overview
+{
+	padding: 1em;
+	width: 800px;
+	margin: 0 auto;
+}
+
+#overview h2
+{
+	color: #545454;
+    text-shadow: 1px 1px 1px grey;
+    font-family: 'Crete Round', serif;
+    margin-bottom: 10px;
+    margin-top: 10px;	
+}
+#overview h3
+{
+	color: #6f6f6f;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    text-shadow: 1px 1px 1px grey;
+	font-weight: bold;
+}
+
+#planAhead
+{
+	width: 45%;
+}
+#planAhead p
+{
+	margin-top: 10px;
+}
+#otherReasons
+{
+	width: 50%;
+}
+#whyWireframes
+{
+	padding-bottom: 1em;
+}
+
+#geekOpsLeft
+{
+	width: 45%;
+}
+
+#geekOpsRight
+{
+	width: 50%;
+}
 /* Misc Classes */
 .left
 {
