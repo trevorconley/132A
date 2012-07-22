@@ -1,129 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>	    
-    	<meta charset="utf-8">
-	    <title>
-			Overview
-	    </title>
-	    <link rel="stylesheet" href="css/home.css" />
-	    <link rel="stylesheet" href="css/proposal.css" />
-		<LINK REL="ICON" HREF="http://i.imgur.com/zmI8D.png" type="image/x-icon" />
-		<LINK REL="SHORTCUT ICON" HREF="http://i.imgur.com/zmI8D.png" type="image/x-icon" />
-	    <script src="js/jquery172.js" type="text/javascript"></script>
-	    <script src="js/bootstrap.js" type="text/javascript"></script>
-		<script src="js/lightbox.js"></script>
-		<script type="text/javascript">
-			function prev_img(){
-				$("#screen").attr("src", "http://placehold.it/446x280");
-			}
-			function next_img(){
-				$("#screen").attr("src", "img/changed.png");
-			}
-		</script>
-    </head>
-
-
-    <body>
-	<div id="fb-root"></div>
-	    <script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
-		fjs.parentNode.insertBefore(js, fjs);
-	    }(document, 'script', 'facebook-jssdk'));</script>
-	    <div id="top-wrap">
-	        <div id = "top">
-		    	<figure id="logo">
-		   		    <img src="img/logo.png" alt="GeekOps">
-		    	</figure>
-		        <nav id ="top-nav">
-					<ul class="nav-tabs">
-						<li><a href="home.html">home</a></li>
-					  	<li><a href="overview.html">overview</a></li>
-					  	<li><a href="features.html">features</a></li>
-						<li><a href="contact.html">contact us</a></li>
-					</ul>
-				</nav>	    	
+<html>
+<head>
+	<title>Wireframer by GeekOps</title>
+	<link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- Container that holds the entire page -->
+	<div id="mainContainer">
+		<header>
+			<div id="innerHeader">
+			     <figure id="logo" class="left"></figure>
+			     <nav class="right">
+				     <a href="index.html">Home</a>
+				     <a href="overview.html">Overview</a>
+				     <a href="features.html">Features</a>
+				     <a href="">Contact Us</a>
+			     </nav>
 		    </div>
-		</div>
-    	<div id="page">
-	    	<div id ="main">
-	    		<div id="overview">
-		    		<h2 class="padTop">Why are you here?</h2>
-		    		<div class = "three_columns features">
-						<div class = "feature">
-							<h3>Plan Ahead</h3>
-							<p>Are you a frustrated Web Developer that spends an obscene amount of time designing several different drafts before finally coming to a design you sort of like? </p>
-						</div>
-						<div class = "feature">
-							<h2>&nbsp; </h2>
-							<p>Then a wireframe tool is for you! Cut your time dramatically by creating a mockup design of your website. Once you have the design, then you can move forward to implementing the design how you wish.</p>
-						</div>
-					</div>
-					<hr />
-					<h2>Why use a Wireframe tool?</h2>
-					<div class = "three_columns features">
-						<div class = "feature">
-							<h3>Cost</h3>
-							<p>Design the layout before investing resources.</p>
-						</div>
-						<div class = "feature">
-							<h3>Time</h3>
-							<p>Save time by having a plan before implementation.</p>
-						</div>
-						<div class = "feature">
-							<h3>Simple</h3>
-							<p>Focus solely on the structural design before adding color and content.</p>
-						</div>
-					</div>
-					<hr />
-					<h2>Why GeekOps Wireframe tool?</h2>
-					<div class = "three_columns features">
-						<div class = "feature">
-							<p>GeekOps Wireframe is a cost and time efficient web-based tool that has a simplistic and intuitive user interface that optimizes the Web Developer's experience.</p>
-						</div>
-						<div class = "feature">	
-						
-							<ul>
-								<li><p>No pesky pop-up windows.</p></li>
-								<li><p>No confusing pathways to the actual wireframe tool.</p></li>
-								<li><p>No unecessary and complicated features.</p></li>
-								<li><p>No mysteries in how to operate the tool.</p></li>
-							</ul>
-						
-						</div>
-						<div class="feature">
-							<h3>Who can use GeekOps Wireframe tool?</h3>
-							<ul>
-								<li>Web Developers</li>
-								<li>Mobile Developers</li>
-							</ul>
-						</div>
-					</div>	
+		</header>
+		<section id="overviewWrapper">
+			<div id="overview">
+			<section id="whyWireframes">
+			<h2>Why use a wireframe tool?</h2>
+			     <div id="planAhead" class="left">
+			     <h3>Plan Ahead</h3>
+				 <p>Are you a frustrated Web Developer that spends an obscene amount of time designing several different drafts before finally coming to a design you sort of like? </p>	
+				 <p>Then a wireframe tool is for you! Cut your time dramatically by creating a mockup design of your website. Once you have the design, then you can move forward to implementing the design how you wish.</p>
 				</div>
-			</div>
-		</div>
-		<div id="footerWrapper">
-	       <div id ="footer">
-	    	  <div class="left">
-	    	    <a href="sitemap.html">Site Map</a> |
-	    	    <a href="#">Privacy Policy</a> |
-	    	    <a href="#">Terms of Use</a> |
-	    	    <a href="#">&copy; 2012 Geek Ops</a>
-	    	  </div>
-	    	  <div class="right">
+				<div id="otherReasons" class="right">
+				<h3>Cost</h3>
+				<p>Design the layout before investing resources.</p>
+				<h3>Time</h3>
+				<p>Save time by having a plan before implementation.</p>
+				<h3>Simple</h3>
+				<p>Focus solely on the structural design before adding color and content.</p>
+			    </div>
+			    <div class="clear"></div>
+			</section>
+			<section id="whyGeekOps">
+				<div id="geekOpsLeft" class="left">
+				<h2>Why GeekOps Wireframe tool?</h2>
+				<p>GeekOps Wireframe is a cost and time efficient web-based tool that has a simplistic and intuitive user interface that optimizes the Web Developer's experience.</p>
+				<ul>
+					<li><p>No pesky pop-up windows.</p></li>
+					<li><p>No confusing pathways to the actual wireframe tool.</p></li>
+					<li><p>No unecessary and complicated features.</p></li>
+					<li><p>No mysteries in how to operate the tool.</p></li>
+				</ul>
+			    </div>
+			    <div id="geekOpsRight" class="right">
+				<h2>Who can use GeekOps Wireframe tool?</h2>
+			     <ul>
+					<li>Web Developers</li>
+					<li>Mobile Developers</li>
+				</ul>
+			    </div>
+			</section>
+			 </div>
+		</section>
+	    <footer>
+	         <div id="footerWrapper">
+	         	<div id="footerNav" class="left">
+	         		<a href="">Site Map</a> 
+	         		<a href="">Privacy Policy</a> 
+	         		<a href="">Terms of Use</a> 
+	         		&copy; 2012 Geek Ops
+	         	</div>
+	         	<div id="socialNetworking" class="right">
 	    		  <a href="https://twitter.com/Geek_Ops" data-show-count="false"><img src="img/twitterbird.png" alt="GeekOps"></a>
 	    		  <a href="http://www.facebook.com/GeekOps"><img src="img/facebookF.png" alt="GeekOps"></a>
-				  <div class="fb-like" data-href="http://www.facebook.com/GeekOps" data-send="false" data-layout="button_count" data-width="15" data-show-faces="true" data-font="verdana"></div>
-			  </div>	
-	       </div>
-        </div>
-    </body>
-
- </html>
-
-
-
-
-
+                  <div class="fb-like" data-href="http://www.facebook.com/GeekOps" data-send="false" data-layout="button_count" data-width="15" data-show-faces="true" data-font="verdana"></div>
+	         	</div>
+	         </div>
+	    </footer>
+	</div>
+</body>
+</html>

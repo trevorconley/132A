@@ -1,145 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>	    
-    	<meta charset="utf-8">
-	    <title>
-			Features
-	    </title>
-	    <link rel="stylesheet" href="css/home.css" />
-	    <link rel="stylesheet" href="css/proposal.css" />
-	    <link rel="stylesheet" href="css/lightbox.css" />
-		<LINK REL="ICON" HREF="http://i.imgur.com/zmI8D.png" type="image/x-icon" />
-		<LINK REL="SHORTCUT ICON" HREF="http://i.imgur.com/zmI8D.png" type="image/x-icon" />
-	    <script src="js/jquery172.js" type="text/javascript"></script>
-	    <script src="js/bootstrap.js" type="text/javascript"></script>
-		<script src="js/lightbox.js"></script>
-		<script type="text/javascript">
-			function prev_img(){
-				$("#screen").attr("src", "http://placehold.it/446x280");
-			}
-			function next_img(){
-				$("#screen").attr("src", "img/changed.png");
-			}
-		</script>
-    </head>
-
-
-    <body>
-	<div id="fb-root"></div>
-	    <script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
-		fjs.parentNode.insertBefore(js, fjs);
-	    }(document, 'script', 'facebook-jssdk'));</script>
-		<div id="top-wrap">
-	        <div id = "top">
-		    	<figure id="logo">
-		   		    <img src="img/logo.png" alt="GeekOps">
-		    	</figure>
-		        <nav id ="top-nav">
-					<ul class="nav-tabs">
-						<li><a href="home.html">home</a></li>
-					  	<li><a href="overview.html">overview</a></li>
-					  	<li><a href="features.html">features</a></li>
-						<li><a href="contact.html">contact us</a></li>
-					</ul>
-				</nav>	    	
+<html>
+<head>
+	<title>Wireframer by GeekOps</title>
+	<link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- Container that holds the entire page -->
+	<div id="mainContainer">
+		<header>
+			<div id="innerHeader">
+			     <figure id="logo" class="left"></figure>
+			     <nav class="right">
+				     <a href="index.html">Home</a>
+				     <a href="overview.html">Overview</a>
+				     <a href="features.html">Features</a>
+				     <a href="">Contact Us</a>
+			     </nav>
 		    </div>
-		</div>
-    	<div id="page">
-	    	<div id ="main">
-	    		<div id="features">
-				<h3 id = "message">GeekOps Wireframe tool comming soon...</h3>
-					<h2 id="heading">List of Features:</h2>
-					<div class = "three_columns features">
-						<div class = "feature">
-							<h3>Grey-scale</h3>				
-							<p>Eliminate the distraction of color.</p>
-						</div>
-						<div class = "feature">	
-							<h3>Basic tools</h3>
-							<p>Includes a pencil tool, shape tool, line tool, and text tool.</p>
-						</div>
-						<div class = "feature">	
-							<h3>Grid</h3>
-							<p>Snap and arrange elements on a grid.</p>
-						</div>
+		</header>
+		<section id="featuresList">
+			<div id="featuresWrapper">
+			    	 <div id="leftColTop" class="left">
+			    		<h3>Grey-scale</h3>				
+						<p>Eliminate the distraction of color.</p>
+						<h3>Basic tools</h3>
+						<p>Includes a pencil tool, shape tool, line tool, and text tool.</p>
+						<h3>Grid</h3>
+						<p>Snap and arrange elements on a grid.</p>
+						<h3>Mobile Templates</h3>
+						<p>For Android and IOS developmers</p>
 					</div>
-
-					<div class = "three_columns features">
-						<div class = "feature">
-							<h3>Zoom</h3>
-							<p>Zoom in close for extra details.</p>
-						</div>	
-						<div class = "feature">
-							<h3>Grouping</h3>
-							<p>Group elements together for simple editing.</p>
-						</div>	
-						<div class = "feature">	
-							<h3>Layering</h3>
-							<p>Bring elements into either the foreground or background.</p>
-						</div>	
+					<div id="rightColTop" class="right">
+						<h3>Zoom</h3>
+						<p>Zoom in close for extra details.</p>
+						<h3>Grouping</h3>
+						<p>Group elements together for simple editing.</p>
+						<h3>Browser Icons</h3>
+						<p>various scrollbars, tab containers, drop down menus, buttons, and links.</p>
 					</div>
-					
-					<div class = "three_columns features">
-						<div class = "feature">		
-							<h3>Browser Icons</h3>
-							<p>various scrollbars, tab containers, drop down menus, buttons, and links.</p>
-						</div>	
-						<div class = "feature">
-							<h3>Other Icons</h3>
-							<p>various icons that appear on the web (arrows, shopping cart, chat, trash, and many more).</p>
-						</div>	
-						<div class = "feature">	
-							<h3>Functional Links</h3>
-							<p>Mockup your pathway by linking your design to other designs.</p>
-						</div>
+					 <div id="middleTop" class="right">
+						<h3>Other Icons</h3>
+						<p>various icons that appear on the web (arrows, shopping cart, chat, trash, and many more).</p>
+						<h3>Functional Links</h3>
+						<p>Mockup your pathway by linking your design to other designs.</p>	
+						<h3>Export your Design</h3>
+						<p>Export your mockup to PDF or PNG.</p>
+						<h3>Custom Templates</h3>
+						<p>Basic array of editable templates to choose from.</p>	
 					</div>
-					
-					<div class = "three_columns features">
-						<div class = "feature">					
-							<h3>Export your Design</h3>
-							<p>Export your mockup to PDF or PNG.</p>
-						</div>	
-						<div class = "feature">			
-							<h3>Custom Templates</h3>
-							<p>Basic array of editable templates to choose from.</p>
-						</div>	
-						<div class = "feature">			
-							<h3>Mobile Templates</h3>
-							<p>For Android and IOS developmers</p>
-						</div>	
-					</div>
-							<h2>Group challenges:</h2>
-							<p>The first challenge as a group was to figure out how to meet up to complete the first assignment. 
-							We matched schedules and we were still unable to find reasonable times to collaborate. 
-							As engineers, we came together and tackled the problem with technology. We created a google group, communicated through email, coded on a repository, and chatted through skype.
-							In result, this convenient solution allowed us to overcome the challenges we faced; that is, we were all able to work from home with our own schedules.</p>
-		    	</div>
-		    </div>
-		</div>
-		<div id="footerWrapper">
-	       <div id ="footer">
-	    	  <div class="left">
-	    	    <a href="sitemap.html">Site Map</a> |
-	    	    <a href="#">Privacy Policy</a> |
-	    	    <a href="#">Terms of Use</a> |
-	    	    <a href="#">&copy; 2012 Geek Ops</a>
-	    	  </div>
-	    	  <div class="right">
+					<div class="clear">.</div>
+			</div>
+		</section>
+		<section id="challenges">
+			 <div id="challengesWrapper">
+			 		<h2>Group challenges:</h2>
+					<p>The first challenge as a group was to figure out how to meet up to complete the first assignment. 
+					We matched schedules and we were still unable to find reasonable times to collaborate. 
+					As engineers, we came together and tackled the problem with technology. We created a google group, communicated through email, coded on a repository, and chatted through skype.
+					In result, this convenient solution allowed us to overcome the challenges we faced; that is, we were all able to work from home with our own schedules.</p>
+			 </div>	
+		</section>
+	    <footer>
+	         <div id="footerWrapper">
+	         	<div id="footerNav" class="left">
+	         		<a href="">Site Map</a> 
+	         		<a href="">Privacy Policy</a> 
+	         		<a href="">Terms of Use</a> 
+	         		&copy; 2012 Geek Ops
+	         	</div>
+	         	<div id="socialNetworking" class="right">
 	    		  <a href="https://twitter.com/Geek_Ops" data-show-count="false"><img src="img/twitterbird.png" alt="GeekOps"></a>
 	    		  <a href="http://www.facebook.com/GeekOps"><img src="img/facebookF.png" alt="GeekOps"></a>
-				  <div class="fb-like" data-href="http://www.facebook.com/GeekOps" data-send="false" data-layout="button_count" data-width="15" data-show-faces="true" data-font="verdana"></div>
-			  </div>	
-	       </div>
-        </div>
-    </body>
-
- </html>
-
-
-
-
-
+                  <div class="fb-like" data-href="http://www.facebook.com/GeekOps" data-send="false" data-layout="button_count" data-width="15" data-show-faces="true" data-font="verdana"></div>
+	         	</div>
+	         </div>
+	    </footer>
+	</div>
+</body>
+</html>
