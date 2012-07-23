@@ -58,44 +58,27 @@
 
 	    	function links(){
 	    		var b1 =document.getElementById("box1");
-	    		var b2 =document.getElementById("box2");
-	    		b1.src="img/box1a.png";
-	    		b2.src="img/box1b.png";
+	    		b1.src="img/box1.png";
 	    		$('#box1').animate({
 				    opacity: 0.25
 				  }, 400, function() {
 				});
-	    		$('#box2').animate({
-				    opacity: 0.25
-				  }, 400, function() {
-				});
+
 				$('#box1').animate({
 				    opacity: 1
 				  }, 200, function() {
 				});
 
-				$('#box2').animate({
-				    opacity: 1
-				  }, 200, function() {
-				});
 	    	}
 	    	function navs(){
-	    		document.getElementById("box1").src="img/box2a.png";
-	    		document.getElementById("box2").src="img/box2b.png";
+	    		var b1 =document.getElementById("box1");
+	    		b1.src="img/box2.png";
+
 	    		$('#box1').animate({
 				    opacity: 0.25
 				  }, 400, function() {
 				});
-	    		$('#box2').animate({
-				    opacity: 0.25
-				  }, 400, function() {
-				});
 				$('#box1').animate({
-				    opacity: 1
-				  }, 200, function() {
-				});
-
-				$('#box2').animate({
 				    opacity: 1
 				  }, 200, function() {
 				});
@@ -234,11 +217,11 @@
 	</div>
 	<div id="bottom">
 		<div id="widgets">
-			<img id="box1" src="img/box1a.png" alt="box1">
-			<img id="box2" src="img/box1b.png" alt="box1">
+			<img id="box1" src="img/box1.png" alt="box1">
 		</div>
 		<div id="canvas-wrap">
 			<div id="canvas">
+				<img id="sample" src="img/sample.png" alt="sample"/>
 			</div>
 		</div>
 	</div>
