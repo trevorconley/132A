@@ -194,10 +194,6 @@ footer a:hover
 	text-decoration: none;
 }
 
-input:focus, select:focus, textarea:focus {
-    outline: none;
-}
-
 #footerWrapper
 {
 	width: 800px;
