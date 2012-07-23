@@ -5,6 +5,12 @@
 	<link href="css/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script>
+		function open_tool(){
+		window.open ("wireframe.html","working_window","status=1,width=1020,height=640");
+		working_window.moveTo(0,0);
+		}
+	</script>
 </head>
 <body>
 	<!-- like us on facebook app -->
@@ -34,12 +40,13 @@
 		</header>
 	    <section id="hook">
 	    	<div id="innerHook">
-	    	    <img src="img/mockup.png" alt="Mockup of Product" id="example" class="left">
+	    		<a href="javascript:open_tool()">
+	    	    <img src="img/mockup.png" alt="Mockup of Product" id="example" class="left"></a>
 	    	    <div id="smallOverview" class="right">
 	    	         <h1>GeekOps Wireframer</h1>
 	    	         <p>Wireframer is a professional design mock up tool designed for developers of any levels. Our library of classic icons and mobile templates help you speed up UI development. Share and collaborate designs in groups, and export to XML or PNG when you've finished.</p>
 	    	         <div id="learnMore">
-	    	         	<a href="">Learn More</a></div>
+	    	         	<a href="javascript:open_tool()">Learn More</a></div>
 	    	    </div>
 	        </div>
 	    </section>

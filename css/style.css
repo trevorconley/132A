@@ -428,3 +428,7 @@ textarea
 {
 	clear: both;
 }
+
+#example{
+	box-shadow: 0 0 15px 5px #888;
+}
