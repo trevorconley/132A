@@ -58,7 +58,7 @@
 
 	    	function links(){
 	    		var b1 =document.getElementById("box1");
-	    		var b2 =document.getElementById("box2").src;
+	    		var b2 =document.getElementById("box2");
 	    		b1.src="img/box1a.png";
 	    		b2.src="img/box1b.png";
 	    		$('#box1').animate({
@@ -146,6 +146,7 @@
 		</div>
 		<div id="toolbar-wrap">
 			<div id="toolbar">
+				<!--
 				<button class="button orange">Undo</button>
 	    		<button class="button orange">Redo</button>
 	    		<button class="button orange">Send back</button>
@@ -154,6 +155,34 @@
 	    		<button class="button orange">Group</button>
 	    		<button class="button orange">UnGroup</button>
 	    		<button class="button orange">Delete</button>
+	    	-->
+	    	<ul>
+	    		<li><img id="img_undo" class="toolbar" src="icons/Toolbar_Undo.png" alt="Undo last change"/>
+	    		<a href="#">Undo</a>
+	    		</li>
+	  	    	<li>
+				<img id="img_redo" class="toolbar" src="icons/Toolbar_Redo.png" alt="Redo last change"/>
+	    		<a href="#">Redo</a>
+	    		</li>
+	    		<li><img id="img_move_backward" class="toolbar" src="icons/Toolbar_Move_Backward.png" alt="Move element to back"/>
+	    		<a href="#">Backward</a>
+	    		</li>
+	    		<li><img id="img_move_foreward" class="toolbar" src="icons/Toolbar_Move_Foreward.png" alt="Move element to front"/>
+	    		<a href="#">Forward</a>
+				</li>
+				<li><img id="img_group" class="toolbar" src="icons/Toolbar_Group.png" alt="Group elements"/>
+				<a href="#">Group</a>
+				</li>
+				<li><img id="img_ungroup" class="toolbar" src="icons/Toolbar_Ungroup.png" alt="Ungroup elements"/>
+				<a href="#">Ungroup</a>
+				</li>
+				<li><img id="img_delete" class="toolbar" src="icons/Toolbar_Delete.png" alt="Delete element"/> 
+				<a href="#">Delete</a>
+				</li>
+				<li><img id="img_grid" class="toolbar" src="icons/Toolbar_Grid.png" alt="Show grid"/>
+					<a href="#">Grid</a>
+				</li>
+			</ul>
 			</div>
 		</div>
 	</div>
@@ -185,6 +214,7 @@
 				<img id="img_italic" class="textbar" src="icons/Text_Italic.png" alt="Set italic"/>
 				<img id="img_underline" class="textbar" src="icons/Text_Underlined.png" alt="Set underline"/>
 				<img id="img_A" class="textbar" src="icons/Text_A.png" alt="Set size"/>
+				<input class="input-mini" placeholder="13"</input>
 				<img id="img_leftadjusted" class="textbar" src="icons/Text_Left-Adjusted.png" alt="Left-adjusted text"/>
 				<img id="img_center" class="textbar" src="icons/Text_Center.png" alt="Center adjusted text"/>
 				<img id="img_rightadjusted" class="textbar" src="icons/Text_Right-Adjusted.png" alt="Right-adjusted text"/>
@@ -193,14 +223,8 @@
 				
 				<img id="img_mouse" class="toolbar" src="icons/Toolbar_Mouse.png" alt="Mouse option"/>
 				<img id="img_pen" class="toolbar" src="icons/Toolbar_Pen.png" alt="Pen option"/>
-				<img id="img_undo" class="toolbar" src="icons/Toolbar_Undo.png" alt="Undo last change"/>
-				<img id="img_redo" class="toolbar" src="icons/Toolbar_Redo.png" alt="Redo last change"/>
-				<img id="img_move_backward" class="toolbar" src="icons/Toolbar_Move_Backward.png" alt="Move element to back"/>
-				<img id="img_move_foreward" class="toolbar" src="icons/Toolbar_Move_Foreward.png" alt="Move element to front"/>
-				<img id="img_group" class="toolbar" src="icons/Toolbar_Group.png" alt="Group elements"/>
-				<img id="img_ungroup" class="toolbar" src="icons/Toolbar_Ungroup.png" alt="Ungroup elements"/>
-				<img id="img_delete" class="toolbar" src="icons/Toolbar_Delete.png" alt="Delete element"/>
-				<img id="img_grid" class="toolbar" src="icons/Toolbar_Grid.png" alt="Show grid"/>
+				
+		
 				<img id="img_import" class="toolbar" src="icons/Toolbar_Import.png" alt="Import design"/>
 				<img id="img_export" class="toolbar" src="icons/Toolbar_Export.png" alt="Export design"/>
 				<img id="img_fullscreen" class="toolbar" src="icons/Toolbar_FullscreenOn.png" alt="Fullscreen mode on"/>
