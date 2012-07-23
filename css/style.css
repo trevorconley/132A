@@ -416,6 +416,7 @@ textarea
     text-shadow: 1px 1px 1px grey;
     background: #d8d8d8; /* Old browsers */
     background-image: url("../img/middle_bg.png");
+    background-repeat: repeat-x;
 
 }
 /* Misc Classes */
