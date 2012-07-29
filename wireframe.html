@@ -9,14 +9,20 @@
 	<!--[if IE 7]>
 	  <link rel="stylesheet" href="fa/font-awesome-ie7.css">
 	<![endif]-->
-
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/lib/jquery-1.7.2.min.js"></script>
+	<!--qtip script-->
+	<script src="js/qtip/jquery.qtip.min.js"></script>
+	<script src="js/script.js"></script>
 	<script>
 		function dragDropStart(e)
 		{
 		  e.dataTransfer.effectAllowed = "move";
 		  e.dataTransfer.setData("text/html", e.target.innerHTML);
 		}
-		
+
 		function dragEnter(e)
 		{	
 		  e.dataTransfer.dropEffect = "move";
@@ -32,7 +38,7 @@
 		{	
 			var html = e.dataTransfer.getData("text/html");
 			e.target.innerHTML += html;
-		  
+
 		}
 
 		window.onload = function () 
@@ -61,7 +67,7 @@
 		   document.getElementById("frame").addEventListener("dragenter",dragEnter,false);
 		   document.getElementById("frame").addEventListener("dragover",dragOver,false);
 		   document.getElementById("frame").addEventListener("drop",drop,false);
-		   
+
 		};
 		</script>
 </head>

@@ -73,10 +73,7 @@ section#canvas > section#pad{
 
 /* canvas */
 
-.draggable{
-	width : inherit;
-	height : inherit;
-}
+.draggable {}
 
 .resizeable{
 	height : inherit;
