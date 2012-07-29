@@ -12,12 +12,26 @@
         	padding-left: 10px;
         	padding-top: 10px;
         	border-bottom-style: solid;
-        	border-bottom-color: grey;
+        	border-bottom-color: #DEDEDE;
         	border-bottom-width: 1px;
+        }
+        #matchList li:hover 
+        {
+        	background-color: #FAFAFA;
         }
         #searchbox
         {
-        	width: 185px;
+        	width: 158px;
+        }
+        #outputResults
+        {
+        	max-height: 120px;
+        	overflow: auto;
+        	width: 165px;
+        	-moz-box-shadow: 1px 1px 1px #d6d6d6;
+        	-webkit-box-shadow: 1px 1px 1px #d6d6d6; 
+        	box-shadow: 1px 1px 1px #d6d6d6;
+        	background-color: #f0f0f0;
         }
      </style>
      <script>
@@ -26,6 +40,7 @@
                                "radio button", "combobox", "accordion", "tab bar", "link bar",
                                "vertical tab", "table", "format bar", "menu", "text box", 
                                "date picker", "list", "date stepper"];
+
 
          var selected = "";
 
@@ -55,18 +70,10 @@
 
          function printMatches(m)
          {
+         	// If there was a previous suggestion, get rid of it by deleting 
+         	// all of the nodes associated with it. 
           	var displayArea = document.getElementById("outputResults");
-
-            // determine if a list has already been generated 
-            if( displayArea.childElementCount > 0 )
-            {
-            	// If a list has already been created, then remove the 
-            	// elements
-            	while( displayArea.childElementCount !== 0 )
-            	{
-                    displayArea.removeChild(displayArea.firstChild);
-            	}
-            }
+            removeElements(displayArea);
 
          	// Create an ul with the matches 
          	var newUL = document.createElement("ul");
@@ -87,14 +94,51 @@
 
             if( m.length > 0 )
             {
-         	    newUL.setAttribute("style", "background-color: #f0f0f0; width: 150px; margin-top: 0; -moz-box-shadow: 1px 1px 1px #d6d6d6; -webkit-box-shadow: 1px 1px 1px #d6d6d6; box-shadow: 1px 1px 1px #d6d6d6; padding-right: 0; padding-top: 10px; padding-left: 0;");
+            	displayArea.removeAttribute("style");
+         	    newUL.setAttribute("style", "background-color: #f0f0f0; width: 150px; margin-top: 0; padding-right: 0; padding-left: 0;");
          	}
          	else
          	{
          		newUL.removeAttribute("style");
+         		displayArea.setAttribute("style", "display: none;");
          	}
          }
 
+        function removeElements(da)
+        {
+        	// determine if a list has already been generated 
+        	if( da.childElementCount > 0 )
+        	{
+        		// If a list has already been created, then remove the 
+        		// elements
+        		while( da.childElementCount !== 0 )
+        		{
+        	        da.removeChild(da.firstChild);
+        		}
+        	}
+
+        }
+
+        function autoSuggest()
+        {
+         		printMatches(findSequence(document.getElementById("searchbox").value));
+
+        		var curNode = document.getElementById("matchList");
+        		var numChildren = curNode.childElementCount;
+        		curNode = curNode.firstChild;
+        		for( var i = 0; i < numChildren; i++ )
+        		{
+        			curNode.onmousedown = function()
+        			{
+        				window.selected = this.id;
+
+        				document.getElementById("wireframeCanvas").innerHTML += window.selected;
+
+        				setTimeout(function(){ removeElements(document.getElementById("outputResults"))},100);
+        			}
+        			curNode = curNode.nextSibling;
+        		}       	
+        }
 
         // figuring out how to manipulate the form elements
         window.onload = function()
@@ -102,22 +146,7 @@
         	// when the page has fully loaded determine what the method property equals of the form called wireframSearch
         	document.getElementById("searchbox").onkeyup = function() 
         	{
-        		printMatches(findSequence(document.getElementById("searchbox").value));
-
-        		var curNode = document.getElementById("matchList");
-        		var numChildren = curNode.childElementCount;
-        		curNode = curNode.firstChild;
-        		for( var i = 0; i < numChildren; i++ )
-        		{
-        			curNode.onclick = function()
-        			{
-        				window.selected = this.id;
-
-        				document.getElementById("wireframeCanvas").innerHTML = window.selected;
-
-        			}
-        			curNode = curNode.nextSibling;
-        		}
+        		autoSuggest();
         	}
         }
      </script>
