@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Search Function</title>
+  </head>
+     <style>
+        #matchList li 
+        {
+        	list-style-type: none;
+        	margin: 0;
+        	padding-bottom: 10px;
+        	padding-left: 10px;
+        	padding-top: 10px;
+        	border-bottom-style: solid;
+        	border-bottom-color: grey;
+        	border-bottom-width: 1px;
+        }
+        #searchbox
+        {
+        	width: 185px;
+        }
+     </style>
+     <script>
+        var componentsArray = ["button", "browser", "image", "textfield", 
+                               "button bar", "search", "section title", "checkbox", 
+                               "radio button", "combobox", "accordion", "tab bar", "link bar",
+                               "vertical tab", "table", "format bar", "menu", "text box", 
+                               "date picker", "list", "date stepper"];
+
+         var selected = "";
+
+         function findSequence(s)
+         {
+         	if( s.charAt(0) === " " || s === "" ) 
+         		return "";
+
+         	var i;
+         	var matches = [];
+         	for( i = 0; i < componentsArray.length; i++ )
+         	{
+         		// if the component name contains the sequence, store the component in the array matches
+         		if( componentsArray[i].indexOf(s) !== -1 )
+         		{
+         			matches[matches.length] = componentsArray[i];
+         		}
+         	}
+
+            if( matches.length === 0 )
+            {
+            	return "";
+            }
+
+         	return matches;
+         }
+
+         function printMatches(m)
+         {
+          	var displayArea = document.getElementById("outputResults");
+
+            // determine if a list has already been generated 
+            if( displayArea.childElementCount > 0 )
+            {
+            	// If a list has already been created, then remove the 
+            	// elements
+            	while( displayArea.childElementCount !== 0 )
+            	{
+                    displayArea.removeChild(displayArea.firstChild);
+            	}
+            }
+
+         	// Create an ul with the matches 
+         	var newUL = document.createElement("ul");
+         	newUL.setAttribute("id", "matchList");
+         	displayArea.appendChild(newUL);
+
+         	// go through each match and make it a li 
+         	var i;
+         	var newLi; 
+         	for( i = 0; i < m.length; i++ )
+         	{
+                newLi = document.createElement("li");
+                newLi.setAttribute("id", m[i]);
+                newUL.appendChild(newLi);
+                newText = document.createTextNode(m[i]);
+                newLi.appendChild(newText);
+         	}
+
+            if( m.length > 0 )
+            {
+         	    newUL.setAttribute("style", "background-color: #f0f0f0; width: 150px; margin-top: 0; -moz-box-shadow: 1px 1px 1px #d6d6d6; -webkit-box-shadow: 1px 1px 1px #d6d6d6; box-shadow: 1px 1px 1px #d6d6d6; padding-right: 0; padding-top: 10px; padding-left: 0;");
+         	}
+         	else
+         	{
+         		newUL.removeAttribute("style");
+         	}
+         }
+
+
+        // figuring out how to manipulate the form elements
+        window.onload = function()
+        {
+        	// when the page has fully loaded determine what the method property equals of the form called wireframSearch
+        	document.getElementById("searchbox").onkeyup = function() 
+        	{
+        		printMatches(findSequence(document.getElementById("searchbox").value));
+
+        		var curNode = document.getElementById("matchList");
+        		var numChildren = curNode.childElementCount;
+        		curNode = curNode.firstChild;
+        		for( var i = 0; i < numChildren; i++ )
+        		{
+        			curNode.onclick = function()
+        			{
+        				window.selected = this.id;
+
+        				document.getElementById("wireframeCanvas").innerHTML = window.selected;
+
+        			}
+        			curNode = curNode.nextSibling;
+        		}
+        	}
+        }
+     </script>
+  <body>
+  	<!-- A Simple Form -->
+  	<form id="wireframeSearch" name="wireframeSearch" method="get">
+  		<input type="text" id="searchbox" name="searchbox" autocomplete="off">
+  	</form>
+
+  	<!-- Where the output will go -->
+    <div id="outputResults" name="outputResults"></div>
+    <div id="wireframeCanvas" name="wireframeCanvas"></div>
+
+  </body>
+</html>
