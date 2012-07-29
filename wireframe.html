@@ -1,458 +1,477 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name = "viewport" content = "user-scalable = no">
-	<title>Wireframe 3000&#8482;</title>
-	<link rel="stylesheet" type="text/css" href="css/wireframe.css" />
-	<link rel="stylesheet" href="fa/font-awesome.css" type="text/css" />
-	<!--[if IE 7]>
-	  <link rel="stylesheet" href="fa/font-awesome-ie7.css">
-	<![endif]-->
-	<!--[if lt IE 9]>
-	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<script src="js/lib/jquery-1.7.2.min.js"></script>
-	<!--qtip script-->
-	<script src="js/qtip/jquery.qtip.min.js"></script>
-	<script src="js/script.js"></script>
-	<script>
-		function dragDropStart(e)
-		{
-		  e.dataTransfer.effectAllowed = "move";
-		  e.dataTransfer.setData("text/html", e.target.innerHTML);
-		}
-
-		function dragEnter(e)
-		{	
-		  e.dataTransfer.dropEffect = "move";
-		}
-
-		function dragOver(e){
-		  if (e.preventDefault) {
-			  e.preventDefault();
-		  }
-		}
-
-		function drop(e)
-		{	
-			var html = e.dataTransfer.getData("text/html");
-			e.target.innerHTML += html;
-
-		}
-
-		window.onload = function () 
-		{ 
-		   document.getElementById("draggableElement1").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement2").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement3").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement4").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement5").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement6").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement7").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement8").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement9").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement10").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement11").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement12").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement13").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement14").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement15").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement16").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement17").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement18").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement19").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement20").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("draggableElement21").addEventListener("dragstart",dragDropStart,false);
-		   document.getElementById("frame").addEventListener("dragenter",dragEnter,false);
-		   document.getElementById("frame").addEventListener("dragover",dragOver,false);
-		   document.getElementById("frame").addEventListener("drop",drop,false);
-
-		};
-		</script>
-</head>
-	<body>
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name = "viewport" content = "user-scalable = no">
+	    <title>Wireframe 3000&#8482;</title>
+	    <link rel="stylesheet" type="text/css" href="css/wireframe.css" />
+	    <link rel="stylesheet" href="fa/font-awesome.css" type="text/css" />
+	    <!--[if IE 7]>
+	      <link rel="stylesheet" href="fa/font-awesome-ie7.css">
+	    <![endif]-->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	    <script src="js/lib/jquery-1.7.2.min.js"></script>
+	    <!--qtip script-->
+	    <script src="js/qtip/jquery.qtip.min.js"></script>
+	    <script src="js/script.js"></script>
+	    <script>
+		    function dragDropStart(e)
+		    {
+		      e.dataTransfer.effectAllowed = "move";
+		      e.dataTransfer.setData("text/html", e.target.innerHTML);
+		    }
+    
+		    function dragEnter(e)
+		    {	
+		      e.dataTransfer.dropEffect = "move";
+		    }
+    
+		    function dragOver(e){
+		      if (e.preventDefault) {
+			      e.preventDefault();
+		      }
+		    }
+    
+		    function drop(e)
+		    {	
+			    var html = e.dataTransfer.getData("text/html");
+			    e.target.innerHTML += html;
+		    }
+		    
+		    function addRecent(e)
+		    {
+			recent = [];
+			recent.push(e);
+			alert(e);
+		    }
+    
+		    window.onload = function () 
+		    { 
+		       document.getElementById("draggableElement1").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement2").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement3").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement4").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement5").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement6").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement7").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement8").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement9").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement10").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement11").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement12").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement13").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement14").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement15").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement16").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement17").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement18").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement19").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement20").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("draggableElement21").addEventListener("dragstart",dragDropStart,false);
+		       document.getElementById("frame").addEventListener("dragenter",dragEnter,false);
+		       document.getElementById("frame").addEventListener("dragover",dragOver,false);
+		       document.getElementById("frame").addEventListener("drop",drop,false);
+    
+		    };
+		    </script>
+    </head>
+    <body>
+	    
+	<header id="toolbar">
+	    <section id="logo">
+		<img src="images/logo.png" alt="wireframe 3000">
+		<h2> Wireframe 3000&trade; </h2>
+	    </section>
+	    <nav>
+		<ul id="css3menu1" class="topmenu" style="width: 300px">
+		    <li class="topfirst"><a href="#" style="height:10px;line-height:10px;"><span>File</span></a>
+			<ul>
+			    <li><a href="#"><i class="icon-bolt" style="padding-right:5px"></i>Render Page <span style="padding-left: 30px; display:inline">ctrl-r</span></a></li>
+			    <li><a href="#"><i class="icon-signout" style="padding-right:5px"></i>Export Image <span style="padding-left: 23px; display:inline">ctrl-e</span></a></li>
+			</ul>
+		    </li>
+		    <li class="topmenu"><a href="#" style="height:10px;line-height:10px;"><span>Edit</span></a>
+			<ul>
+			    <li><a href="#"><i class="icon-copy" style="padding-right:5px;"></i>Copy <span style="padding-left: 20px; display:inline-block;">ctrl-c</span></a></li>
+			    <li><a href="#"><i class="icon-cut" style="padding-right:5px"></i>Cut <span style="padding-left: 30px; display:inline;">ctrl-x</span></a></li>
+			    <li><a href="#"><i class="icon-paste" style="padding-right:5px"></i>Paste <span style="padding-left: 18px; display:inline;">ctrl-v</span></a></li>
+			</ul>
+		    </li>
+		    <li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>View</span></a>
+			<ul>
+			    <li><a href="#"><i class="icon-info-sign" style="padding-right:5px"></i>Toggle Attributes Window <span style="padding-left: 10px; display:inline;">ctrl-a</span></a></li>
+			    <li><a href="#"><i class="icon-th" style="padding-right:5px"></i>Toggle Grid <span style="padding-left: 105px; display:inline;">ctrl-g</span></a></li>
+			    <li><a href="#"><i class="icon-print" style="padding-right:5px"></i>Print View <span style="padding-left: 115px; display:inline;">ctrl-p</span></a></li>
+			</ul>
+		    </li>
+		</ul>
+	    </nav>
+	</header>
 	
-<header id="toolbar">
-            <section id="logo">
-				<img src="images/logo.png" alt="wireframe 3000">
-                <h2> Wireframe 3000&trade; </h2>
-			</section>
-			<nav>
-				<ul id="css3menu1" class="topmenu" style="width: 300px">
-					<li class="topfirst"><a href="#" style="height:10px;line-height:10px;"><span>File</span></a>
-					<ul>
-						<li><a href="#"><i class="icon-bolt" style="padding-right:5px"></i>Render Page <span style="padding-left: 30px; display:inline">ctrl-r</span></a></li>
-						<li><a href="#"><i class="icon-signout" style="padding-right:5px"></i>Export Image <span style="padding-left: 23px; display:inline">ctrl-e</span></a></li>
-					</ul></li>
-					<li class="topmenu"><a href="#" style="height:10px;line-height:10px;"><span>Edit</span></a>
-					<ul>
-                        <li><a href="#"><i class="icon-copy" style="padding-right:5px;"></i>Copy <span style="padding-left: 20px; display:inline-block;">ctrl-c</span></a></li>
-						<li><a href="#"><i class="icon-cut" style="padding-right:5px"></i>Cut <span style="padding-left: 30px; display:inline;">ctrl-x</span></a></li>
-						<li><a href="#"><i class="icon-paste" style="padding-right:5px"></i>Paste <span style="padding-left: 18px; display:inline;">ctrl-v</span></a></li>
-					</ul></li>
-					<li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>View</span></a>
-					<ul>
-						<li><a href="#"><i class="icon-info-sign" style="padding-right:5px"></i>Toggle Attributes Window <span style="padding-left: 10px; display:inline;">ctrl-a</span></a></li>
-						<li><a href="#"><i class="icon-th" style="padding-right:5px"></i>Toggle Grid <span style="padding-left: 105px; display:inline;">ctrl-g</span></a></li>
-						<li><a href="#"><i class="icon-print" style="padding-right:5px"></i>Print View <span style="padding-left: 115px; display:inline;">ctrl-p</span></a></li>
-					</ul></li>
-				</ul>
-			</nav>
-		</header>	
-		<section id="frame">
-				<header>&nbsp;</header>
-				<section id="canvas">
-					<section id="pad"></section>
-				</section>
-				<footer>&nbsp;</footer>
-		</section>
-
-		<!--PALETTE STARTS HERE -->
-
-		<section id="palette">
-			<header><i class="icon-remove-circle icon-large"></i>Attributes</header>
-			<form id="whxy">
-				<div id="palletContainer" style="text-align:center; display:table-cell; padding-left: 30px;">
-					<fieldset data-category="coord">
-						<div class="paletteTop">
-						<label id="width">w:</label> <input type="number" name="width" min="0" max="999"/>
-						<label id="x">x:</label> <input type="number" name="x" min="0" max="999"/>
-						</div>
-						<div class="paletteBottom">
-						<label id="height">h:</label> <input type="number" name="height" min="0" max="999"/>
-						<label id="y">y:</label> <input type="number" name="y" min="0" max="999"/>
-						</div>
-					</fieldset>
-					<fieldset data-category="text">
-						<div class="paletteTop">
-							<i class="icon-bold icon-large"></i>
-							<i class="icon-italic icon-large"></i>
-							<i class="icon-underline icon-large"></i>
-							<i class="icon-strikethrough icon-large"></i>
-							<div><span>style</span><i class="icon-caret-down"></i></div>						
-						</div>
-						<div class="paletteBottom">
-
-						</div>
-					</fieldset>
-					<fieldset data-category="action">
-						<div class="paletteTop">
-							<i class="icon-undo icon-large"></i>
-							<i class="icon-repeat icon-large"></i>
-							<i class="icon-lock icon-large"></i>
-							<i class="icon-group icon-large"></i>	
-							<i class="icon-remove icon-large"></i>				
-						</div>
-						<div class="paletteBottom">
-
-						</div>
-					</fieldset>
-                </div>
-			</form>
-			<footer>
-				<span>Options:</span>
+	<section id="frame">
+	    <header>&nbsp;</header>
+	    <section id="canvas">
+		<section class="grid"></section>
+	    </section>
+	    <footer>&nbsp;</footer>
+	</section>
+    
+	<!--PALETTE STARTS HERE -->
+	
+	<section id="palette">
+	    <header><i class="icon-remove-circle icon-large"></i>Attributes</header>
+	    <form id="whxy">
+		<div id="palletContainer" style="text-align:center; display:table-cell; padding-left: 30px;">
+		    <fieldset data-category="coord">
+			<div class="paletteTop">
+			    <label id="width">w:</label> <input type="number" name="width" min="0" max="999"/>
+			    <label id="x">x:</label> <input type="number" name="x" min="0" max="999"/>
+			</div>
+			<div class="paletteBottom">
+			    <label id="height">h:</label> <input type="number" name="height" min="0" max="999"/>
+			    <label id="y">y:</label> <input type="number" name="y" min="0" max="999"/>
+			</div>
+		    </fieldset>
+		    
+		    <fieldset data-category="text">
+			<div class="paletteTop">
+			    <i class="icon-bold icon-large"></i>
+			    <i class="icon-italic icon-large"></i>
+			    <i class="icon-underline icon-large"></i>
+			    <i class="icon-strikethrough icon-large"></i>
+			    <div><span>style</span><i class="icon-caret-down"></i></div>
+			</div>
+			<div class="paletteBottom">
+			    
+			</div>
+		    </fieldset>
+		    
+		    <fieldset data-category="action">
+			<div class="paletteTop">
+			    <i class="icon-undo icon-large"></i>
+			    <i class="icon-repeat icon-large"></i>
+			    <i class="icon-lock icon-large"></i>
+			    <i class="icon-group icon-large"></i>	
+			    <i class="icon-remove icon-large"></i>
+			</div>
+			<div class="paletteBottom">
+			    
+			</div>
+		    </fieldset>
+		</div>
+	    </form>
+	    
+	    <footer>
+		<span>Options:</span>
+		    <ul>
+			    <li class="pointer selected" data-category="coord">Coordinates</li>
+			    <li class="pointer" data-category="text">Font</li>
+			    <li class="pointer" data-category="action">Action</li>
+		    </ul>
+	    </footer>
+	</section>
+			     
+	<!--LIBRARY STARTS HERE -->
+	
+	<section id="library">
+	    <header>
+		<div id="searchBox">
+		    <form name="searchForm">
+			<div>
+			    <i class="icon-search icon-large icon-height"></i>
+			    <input name="searchfield" type="search" size="20" maxlength="30">
+			</div>
+		    </form>
+		</div>
+	    </header>
+	    
+	    <!-- Tabs -->
+	    <section id="tabs">
+		<nav>
+		    <ul>
+			<li class="pointer selected" data-category="all">All</li>
+			<li class="pointer" data-category="device">Device</li>
+			<li class="pointer" data-category="button">Button</li>
+			<li class="pointer" data-category="text">Text</li>
+			<li class="pointer" data-category="menu">Menu</li>
+			<li class="pointer" data-category="forms">Forms</li>
+			<li class="pointer" data-category="layout">Layout</li>
+			<li class="pointer" data-category="recently">Recently Used</li>
+		    </ul>
+		</nav>
+	    </section>
+	    
+	    <!-- Elements -->
+	    <section id="elements">
+		<div id="elementContainer">
+		    
+		    <!-- button -->
+		    <div id="draggableElement1" class="draggable element1" draggable="true">		
+			<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">
+			    <div id="sbtn" data-lib-width="108" data-lib-height="20">
+				<span class="sbtntext">Button Text</span>
+			    </div>
+			    <div class="title">Button</div>
+			</div>
+		    </div>
+		    
+		    <!-- browser -->
+		    <div id="draggableElement2" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
+			    <div id="libBrowserOuterFrame" data-lib-width="760" data-lib-height="350">
+				<div id="libBrowserHeader">
+				    <i class="icon-caret-left"></i>
+				    <i class="icon-caret-right"></i>
+				    <i class="icon-home"></i>
+				    <div id="libBrowserUrlBox"> http://mysite.com</div>
+				</div>
+				<div id="libBrowserContent"></div>
+				<div id="libBrowserFooter"></div>
+			    </div>
+			    <div class="title">Browser</div>
+			</div>
+		    </div>
+		    <!-- image -->
+		    <div id="draggableElement3" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="150" data-default-height="150" data-category="all image">
+			    <div id="libImage" data-lib-width="150" data-lib-height="150">
+				
+			    </div>
+			    <div class="title">Image</div>
+			</div>
+		    </div>
+		    <!-- text area -->
+		    <div id="draggableElement4" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all text">
+			    <div id="libDummyContainer" data-lib-width="200" data-lib-height="150">
+				<div> <!-- id="libDummyText"> --> <!-- removed so we can have only the text area show -->
+				    <textarea id="lilDummyText" contenteditable"true" placeholder="Add your text here" spellcheck="true" cols="30" rows="5"></textarea>
+				</div>
+			    </div>
+			    <div class="title">textfield</div>
+			</div>
+		    </div>
+		    <!-- button bar -->
+		    <div id="draggableElement5" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="350" data-default-height="30" data-category="all text">
+			    <div id="libButtonBarBox" data-default-width="250" data-default-height="20">
+				<div class="libButtonBarItemFirst">
+				    Item1
+				</div>
+				<div class="libButtonBarItemMiddle">
+				    Item2
+				</div>
+				<div class="libButtonBarItemMiddle">
+				    Item3
+				</div>
+				<div class="libButtonBarItemLast">
+				    Item4
+				</div>
+			    </div>
+			    <div class="title">Button bar</div>
+			</div>
+		    </div>
+		    <div id="draggableElement6" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			    <div id="libSearchBox" data-lib-width="200" data-lib-height="30">
+				<i class="icon-search icon-large icon-height"></i>
+				<div id="libSearchField"></div>
+			    </div>
+			    <div class="title">Search</div>
+			</div>
+		    </div>
+		    <div id="draggableElement7" class="draggable element1" draggable="true">
+			<div class="resizeable" data-category="all text">
+			    <div id="libHeaderBox">
+				<h1 class="libHeader">Section Title</h1>
+			    </div>
+			    <div class="title">Section title</div>
+			</div>
+		    </div>
+		    <div id="draggableElement8" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			    <div id="libCheckBox" data-lib-width="200" data-lib-height="30">
+				<div id="libCheckField"></div>
+				<span>Checkbox</span>
+			    </div>
+			    <div class="title">Checkbox</div>
+			</div>
+		    </div>
+		    <div id="draggableElement9" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			    <div id="libRadioBox" data-lib-width="200" data-lib-height="30">
+				<div id="libRadioField">
+				    <div><input type="radio"></div>
+				    <div>Radio Button</div>
+				</div>
+			    </div>
+			    <div class="title">Radio button</div>
+			</div>
+		    </div>
+		    <div id="draggableElement10" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			    <div id="libComboBox" data-lib-width="200" data-lib-height="30">
+				<div id="libComboField">
+				    <div>ComboBox</div>
+				    <div><i class="icon-caret-down"></i></div>
+				</div>
+			    </div>
+			    <div class="title">Combobox</div>
+			</div>
+		    </div>
+		    
+		    <!-- layout -->
+		    <div id="draggableElement11" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
+			    <div id="libAccordin" data-lib-width="200" data-lib-height="150">
+				<div>Item One</div>
+				<div class="expand"></div>
+				<div>Item Two</div>
+				<div>Item Three</div>
+			    </div>
+			    <div class="title">Accordin</div>
+			</div>
+		    </div>
+		    <div id="draggableElement12" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			    <div id="libTabbar" data-lib-width="200" data-lib-height="30">
 				<ul>
-					<li class="pointer selected" data-category="coord">Coordinates</li>
-					<li class="pointer" data-category="text">Font</li>
-					<li class="pointer" data-category="action">Action</li>
+				    <li>Tab 1</li>
+				    <li>Tab 2</li>
+				    <li>Tab 3</li>
 				</ul>
-			</footer>
-		</section>
-		         
-		<!--LIBRARY STARTS HERE -->
-		
-		<section id="library">
-			<header>
-				<div id="searchBox">
-				<form name="searchForm">
-					<div>
-						<i class="icon-search icon-large icon-height"></i>
-						<input name="searchfield" type="search" size="20" maxlength="30">
-					</div>
-				</form>
+				<div>Item One</div>
+			    </div>
+			    <div class="title">Tab Bar</div>
+			</div>
+		    </div>
+		    <div id="draggableElement13" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			    <div id="libLinkbar" data-lib-width="200" data-lib-height="30">
+				<span class="link">Link 1</span> | <span class="link">Link 2</span> | <span class="link">Link 3</span>
+			    </div>
+			    <div class="title">Link Bar</div>
+			</div>
+		    </div>
+		    <div id="draggableElement14" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			    <div id="libVerticalTab" data-lib-width="200" data-lib-height="30">
+				<div>
+				    <ul>
+					<li>Tab 1</li>
+					<li>Tab 2</li>
+					<li>Tab 3</li>
+				    </ul>
 				</div>
-			</header>
-			<section id="tabs">
-				<nav>
-					<ul>
-						<li class="pointer selected" data-category="all">All</li>
-						<li class="pointer" data-category="device">Device</li>
-						<li class="pointer" data-category="button">Button</li>
-						<li class="pointer" data-category="text">Text</li>
-						<li class="pointer" data-category="menu">Menu</li>
-						<li class="pointer" data-category="forms">Forms</li>
-						<li class="pointer" data-category="layout">Layout</li>
-						<li class="pointer" data-category="recently">Recently Used</li>
-					</ul>
-				</nav>
-			</section>
-			<section id="elements">
-				<div id="elementContainer">
-					<div id="draggableElement1" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">
-                        	<div id="sbtn" data-lib-width="108" data-lib-height="20">
-                        		<span class="sbtntext">Button Text</span>
-                            </div> 
-                            <div class="title">Button</div>
-                        </div>	
-					</div>
-					<div id="draggableElement2" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
-                            	<div id="libBrowserOuterFrame" data-lib-width="760" data-lib-height="350">
-                                    <div id="libBrowserHeader">
-                                    	<i class="icon-caret-left"></i>
-                                        <i class="icon-caret-right"></i>
-                                        <i class="icon-home"></i>
-                                        <div id="libBrowserUrlBox"> http://mysite.com</div>
-                                    </div>
-                                    <div id="libBrowserContent"></div>
-                                    <div id="libBrowserFooter"></div>
-                                </div>
-                            <div class="title">Browser</div>
-                        </div>
-					</div>
-					<div id="draggableElement3" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="150" data-default-height="150" data-category="all image">
-                                <div id="libImage" data-lib-width="150" data-lib-height="150">
-                                    <img src="images/placeholder.gif" style=" width : 70; height : 70px" alt="image file" />
-                                </div>
-								<div class="title">Image</div>
-                       </div>    
-					</div>
-					<div id="draggableElement4" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all text">
-                            <div id="libDummyContainer" data-lib-width="200" data-lib-height="150">
-                                <div id="libDummyText">
-                                    <p> "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                           		</div>    
-                           </div>
-                           <div class="title">textfield</div>
-                        </div>
-					</div>
-					<div id="draggableElement5" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="350" data-default-height="30" data-category="all text">
-                        	<div id="libButtonBarBox" data-default-width="250" data-default-height="20">
-                            	<div class="libButtonBarItemFirst">
-                                	Item1
-                                </div>
-                                <div class="libButtonBarItemMiddle">
-                                	Item2
-                                </div>
-                                <div class="libButtonBarItemMiddle">
-                                	Item3
-                                </div>
-                                <div class="libButtonBarItemLast">
-                                	Item4
-                                </div>
-                            </div>
-							<div class="title">Button bar</div>
-                         </div>
-					</div>
-					<div id="draggableElement6" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
-                        	<div id="libSearchBox" data-lib-width="200" data-lib-height="30">
-                            	<i class="icon-search icon-large icon-height"></i>
-                                <div id="libSearchField"></div>
-                            </div>
-                        	<div class="title">Search</div>
-                        </div>
-					</div>
-					<div id="draggableElement7" class="draggable element1" draggable="true">
-						<div class="resizeable" data-category="all text">
-                            <div id="libHeaderBox">
-                                <h1 class="libHeader">Section Title</h1>
-                            </div>
-							<div class="title">Section title</div>
-                        </div>
-					</div>
-					<div id="draggableElement8" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
-                        	<div id="libCheckBox" data-lib-width="200" data-lib-height="30">
-                                <div id="libCheckField"></div>
-								<span>Checkbox</span>
-                            </div>
-                        	<div class="title">Checkbox</div>
-                        </div>
-					</div>	
-					<div id="draggableElement9" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
-                        	<div id="libRadioBox" data-lib-width="200" data-lib-height="30">
-                                <div id="libRadioField">
-									<div><input type="radio"></div>
-									<div>Radio Button</div>
-								</div>
-                            </div>
-                        	<div class="title">Radio button</div>
-                        </div>
-					</div>							
-					<div id="draggableElement10" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
-                        	<div id="libComboBox" data-lib-width="200" data-lib-height="30">
-                                <div id="libComboField">
-									<div>ComboBox</div>
-									<div><i class="icon-caret-down"></i></div>
-								</div>
-                            </div>
-                        	<div class="title">Combobox</div>
-                        </div>
-					</div>	
-					<!-- layout -->
-					<div id="draggableElement11" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
-                        	<div id="libAccordin" data-lib-width="200" data-lib-height="150">
-								<div>Item One</div>
-								<div class="expand"></div>
-								<div>Item Two</div>
-								<div>Item Three</div>
-                            </div>
-                        	<div class="title">Accordin</div>
-                        </div>
-					</div>
-					<div id="draggableElement12" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
-                        	<div id="libTabbar" data-lib-width="200" data-lib-height="30">
-								<ul>
-									<li>Tab 1</li>
-									<li>Tab 2</li>
-									<li>Tab 3</li>
-								</ul>
-								<div>Item One</div>
-                            </div>
-                        	<div class="title">Tab Bar</div>
-                        </div>
-					</div>	
-					<div id="draggableElement13" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
-                        	<div id="libLinkbar" data-lib-width="200" data-lib-height="30">
-								<span class="link">Link 1</span> | <span class="link">Link 2</span> | <span class="link">Link 3</span>
-                            </div>
-                        	<div class="title">Link Bar</div>
-                        </div>
-					</div>	
-					<div id="draggableElement14" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
-                        	<div id="libVerticalTab" data-lib-width="200" data-lib-height="30">
-								<div>
-									<ul>
-										<li>Tab 1</li>
-										<li>Tab 2</li>
-										<li>Tab 3</li>
-									</ul>
-								</div>
-								<div>
-									Item 1
-								</div>
-							</div>
-                        	<div class="title">Vertical Tab</div>
-                        </div>
-					</div>	
-					<div id="draggableElement15" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
-                        	<div id="libTable" data-lib-width="200" data-lib-height="30">
-								<table>
-									<tr>
-										<th>Name</th><th>Age</th><th>Occupation</th>
-									</tr>
-									<tr>
-										<td>Dom Browski</td><td>24</td><td>Apple</td>
-									</tr>
-									<tr>
-										<td>Bob Smith</td><td>36</td><td>Microsoft</td>
-									</tr>
-									<tr>
-										<td>Shaily Tenessea</td><td>15</td><td>Student</td>
-									</tr>
-								</table>
-							</div>
-                        	<div class="title">Table</div>
-                        </div>
-					</div>
-					<!-- menu -->
-					<div id="draggableElement16" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
-                        	<div id="libFormatBar" data-lib-width="500" data-lib-height="30">
-								<div>
-									<i class="icon-bold"></i>
-									<i class="icon-italic"></i>
-									<i class="icon-underline"></i>
-									<i class="icon-strikethrough"></i>
-									<div>style<i class="icon-caret-down"></i></div>
-									<i class="icon-list-ul"></i>
-									<i class="icon-list-ol"></i>
-									<i class="icon-undo"></i>
-									<i class="icon-repeat"></i>
-								</div>
-							</div>
-                        	<div class="title">Format bar</div>
-                        </div>
-					</div>		
-					<div id="draggableElement17" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
-                        	<div id="libMenu" data-lib-width="500" data-lib-height="30">
-								<div>
-									<div></div><div>Open</div><div></div>
-									<div></div><div>Open</div><div></div>
-									<div></div><div>Open</div><div></div>
-									<div></div><div>Open</div><div></div>
-								</div>
-							</div>
-                        	<div class="title">Menu</div>
-                        </div>
-					</div>
-                    <!-- Forms Section -->
-                    <div id="draggableElement18" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
-                        	<div id="libTextBox" data-lib-width="100" data-lib-height="30">
-								<div id="libTextBoxContainer">
-                                	Text Box
-                                </div>
-                                
-							</div>
-                        	<div class="title">Text Box</div>
-                        </div>
-					</div>									
-                   <div id="draggableElement19" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
-                        	<div id="libDatePickerBox" data-lib-width="100" data-lib-height="30">
-								<div id="libDatePickerContainer">
-                                	12/1/2012
-                                </div>
-                                <i class="icon-calendar" style="padding-left:5px"></i>
-                                
-							</div>
-                        	<div class="title">Date Picker</div>
-                        </div>
-					</div>				 
-                 	<div id="draggableElement20" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
-                        	<div id="libList" data-lib-width="150" data-lib-height="90">
-								<div id="libListContainer">
-                                	Item One <br />
-                                    Item Two <br />
-                                    Item Three <br />
- 
-                                </div>
-							</div>
-                        	<div class="title">List</div>
-                        </div>
-					</div>				 
-                	<div id="draggableElement21" class="draggable element1" draggable="true">
-						<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
-                        	<div id="libNumStepper" style="text-align:center" data-lib-width="150" data-lib-height="90">
-								<div id="libNumStepperContainer">
-                                	3<i class="icon-sort" style="padding-left:5px"></i>
-                                </div>
-							</div>
-                        	<div class="title">Date Stepper</div>
-                        </div>
-					</div>																													
+				<div>
+				    Item 1
 				</div>
-			</section>	
-		</section>
-	</body>
+			    </div>
+			    <div class="title">Vertical Tab</div>
+			</div>
+		    </div>
+		    <div id="draggableElement15" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			    <div id="libTable" data-lib-width="200" data-lib-height="30">
+				<table>
+				    <tr>
+					<th>Name</th><th>Age</th><th>Occupation</th>
+				    </tr>
+				    <tr>
+					<td>Dom Browski</td><td>24</td><td>Apple</td>
+				    </tr>
+				    <tr>
+					<td>Bob Smith</td><td>36</td><td>Microsoft</td>
+				    </tr>
+				    <tr>
+					<td>Shaily Tenessea</td><td>15</td><td>Student</td>
+				    </tr>
+				</table>
+			    </div>
+			    <div class="title">Table</div>
+			</div>
+		    </div>
+					    
+		    <!-- menu -->
+		    <div id="draggableElement16" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
+			    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
+				<div>
+				    <i class="icon-bold"></i>
+				    <i class="icon-italic"></i>
+				    <i class="icon-underline"></i>
+				    <i class="icon-strikethrough"></i>
+				    <div>style<i class="icon-caret-down"></i></div>
+				    <i class="icon-list-ul"></i>
+				    <i class="icon-list-ol"></i>
+				    <i class="icon-undo"></i>
+				    <i class="icon-repeat"></i>
+				</div>
+			    </div>
+			    <div class="title">Format bar</div>
+			</div>
+		    </div>
+		    <div id="draggableElement17" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
+			    <div id="libMenu" data-lib-width="500" data-lib-height="30">
+				<div>
+				    <div></div><div>Open</div><div></div>
+				    <div></div><div>Open</div><div></div>
+				    <div></div><div>Open</div><div></div>
+				    <div></div><div>Open</div><div></div>
+				</div>
+			    </div>
+			    <div class="title">Menu</div>
+			</div>
+		    </div>
+		    
+		    <!-- Forms Section -->
+		    <div id="draggableElement18" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
+			    <div id="libTextBox" data-lib-width="100" data-lib-height="30">
+				<div id="libTextBoxContainer">
+				    Text Box
+				</div>
+			    </div>
+			    <div class="title">Text Box</div>
+			</div>
+		    </div>
+		    <div id="draggableElement19" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
+			    <div id="libDatePickerBox" data-lib-width="100" data-lib-height="30">
+				<div id="libDatePickerContainer">
+				    12/1/2012
+				</div>
+				<i class="icon-calendar" style="padding-left:5px"></i>
+			    </div>
+			    <div class="title">Date Picker</div>
+			</div>
+		    </div>
+		    <div id="draggableElement20" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
+			    <div id="libList" data-lib-width="150" data-lib-height="90">
+				<div id="libListContainer">
+				    Item One <br />
+				    Item Two <br />
+				    Item Three <br />
+				</div>
+			    </div>
+			    <div class="title">List</div>
+			</div>
+		    </div>
+		    <div id="draggableElement21" class="draggable element1" draggable="true">
+			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
+			<div id="libNumStepperContainer">
+			    3
+			    <i class="icon-sort" style="padding-left:5px"></i>
+			</div>
+			<div class="title">Date Stepper</div>
+		    </div>
+		</div>
+		</div>
+	    </section>
+	</section>
+    </body>
 </html>

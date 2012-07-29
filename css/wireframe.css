@@ -17,9 +17,8 @@ body {
 
 #frame { 
 	min-width: 960px;
-	/*min-height: 560px;*/
-	width : 100%;
-	height : 100%;	
+	min-height : 600px;
+	max-height: 600px;
 }
 
 #frame > header{
@@ -58,41 +57,52 @@ section#canvas{
 }
 
 section#canvas > section#pad{
-	position : relative;
+	position : static;
 	margin : 10px auto;
-	border : 1px ridge #ececec;
-    box-shadow: 3px 3px 5px whitesmoke;
-    min-width : 100px;
-    min-height : 100px;
-    background : #fff;
-    width : 95%;
-    height : 95%;
+	border : solid thin;
+	border-radius : 10px;
+	box-shadow: 3px 3px 5px whitesmoke;
+	min-width : 100px;
+	min-height : 100px;
+	background : #fff;
+	width : 95%;
+	height : 95%;
 	background:url(../images/grid_20px.gif);
 	background-repeat:repeat;
 }
 
 /* canvas */
 
-.draggable {}
+.draggable{
+	width : inherit;
+	height : inherit;
+}
 
 .resizeable{
 	height : inherit;
 	min-width : 92px;
 	min-height : 92px;	
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    -o-user-select : none;
-    -webkit-user-select : none;
-    -moz-user-select : none;
-    user-select : none;	
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	-o-user-select : none;
+	-webkit-user-select : none;
+	-moz-user-select : none;
+	user-select : none;
+	resize: both;
 }
 
 .grid{
 	border : 1px dotted #000;
 	display : block;
 	min-width : 100px;
-	min-height : 100px;
+	min-height : 500px;
+	max-height : 80%;
+	max-width : 90%;
 	position : relative;
+	overflow : hidden;
+	margin : 3% 5%;
+	border-radius : 5px;
+	box-shadow: 3px 3px 5px whitesmoke;
 }
 
 .grid > .menu{
@@ -188,6 +198,9 @@ section#canvas > section#pad{
 
 .resizeable{
 	position : relative;
+	height : auto;
+	width : auto;
+	resize: both;
 }
 
 .resizeable > .title{
@@ -232,13 +245,14 @@ section#canvas > section#pad{
 } 
 
 #sbtn {
-	width: 100%;
-	height: inherit;
+	width: 88px;
+	height: 72px; 
 	border: 2px solid black;
 	vertical-align:middle;
 	border-radius: 5px;
 	background-color:#EEE;
 	text-align:center;
+	resize: both;
 }
 .sbtntext {
 	padding: 5px 5px 5px 5px;
@@ -246,13 +260,11 @@ section#canvas > section#pad{
 	font-size: 10px;
 }
 #libImage {
-	width:100%;
-	height:inherit;
-	text-align:center;
+	width: 100px;
+	height: 70px;
 	border: 2px solid black;
-	background-repeat:no-repeat;
-	background-color: white;
-	overflow: hidden;
+	background: url(../images/placeholder.gif);
+	background-color:#EEE;
 }
 #libBrowserUrlBox {
 	background-color: white;
@@ -268,9 +280,10 @@ section#canvas > section#pad{
 #libBrowserOuterFrame {
 	border: 2px solid black;
 	min-width:225px;
-	width: 100%;
-	height: 100%;
+	width: 75%;
+	height: 75%;
 	position:relative;
+	background-color: white;
 }
 #libBrowserHeader{
 	width:100%;
@@ -305,7 +318,7 @@ section#canvas > section#pad{
 	position:absolute; 
 	bottom:0px; 
 	left:0px; 
-	width:inherit;
+	width: 100%;
 }
 #libBrowserContent{
 	min-height: 40px;
@@ -364,8 +377,6 @@ section#canvas > section#pad{
 #libDummyContainer{
 }
 #libDummyText{
-	width: 100%;
-	height: inherit;
 	overflow: hidden;
 	font-size: 10px;
 }
