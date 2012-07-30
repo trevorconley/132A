@@ -666,14 +666,20 @@ section#canvas > section#pad{
 {
 	width: 100px;
 	height: 70px;
-	border: 2px solid black;
 	background-image: url("../mobile.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 60px 70px;
-	background-color:#EEE;	
 }
-
+#libTablet
+{
+	width: 100px;
+	height: 70px;
+	background-image: url("../mobile.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px 70px;
+}
 
 
 #elementContainer {

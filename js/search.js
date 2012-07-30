@@ -4,7 +4,7 @@
                                "button bar", "search", "section title", "checkbox", 
                                "radio button", "combobox", "accordion", "tab bar", "link bar",
                                "vertical tab", "table", "format bar", "menu", "text box", 
-                               "date picker", "list", "date stepper", 'mobile'];
+                               "date picker", "list", "date stepper", 'mobile', 'tablet'];
 
         var associatedDivIds = new Array();
         associatedDivIds["button"] = "drag_button";
@@ -29,6 +29,7 @@
         associatedDivIds["list"] = "drag_list";
         associatedDivIds["date stepper"] = "drag_date_stepper";
         associatedDivIds["mobile"] = "drag_mobile";
+        associatedDivIds["tablet"] = "drag_tablet";
 
 
          var selected = "";
@@ -36,6 +37,7 @@
          // Determine if the sequence the user entered is in the array
          function findSequence(s)
          {
+            s = s.toLowerCase();
          	if( s.charAt(0) === " " || s === "" ) 
          		return "";
 
