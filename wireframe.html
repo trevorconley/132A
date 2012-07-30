@@ -213,12 +213,12 @@
 		<nav>
 		    <ul>
 			<li class="pointer selected" data-category="all">All</li>
-			<li class="pointer" data-category="device">Device and Menu</li>
+			<li class="pointer" data-category="device">Device</li>
 			<li class="pointer" data-category="button">Button</li>
 			<li class="pointer" data-category="text">Text</li>
 		<!--	<li class="pointer" data-category="menu">Menu</li>-->
 			<li class="pointer" data-category="forms">Forms</li>
-			<li class="pointer" data-category="layout">Layout</li>
+			<li class="pointer" data-category="layout">Navigation</li>
 			<li class="pointer" data-category="recently">Recently Used</li>
 		    </ul>
 		</nav>
@@ -256,10 +256,24 @@
 			</div>
 		    </div>
 
+            
+            <!-- Mobile -->
+            <div id="drag_mobile" class="draggable element1" draggable="true">
+            <div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
+              <div id="libMobileOuter" data-lib-width="760" data-lib-height="350">
+                 <div id="libMobileHeader">
+                 </div>
+                <div id="libMobileContent"></div>
+                <div id="libMobileFooter"><img id="homeIcon" src="smallHomeIcon.gif" alt="small home icon"></div>
+               </div>
+           <div class="title">Mobile</div>
+           </div>
+           </div>
+
 		        <!-- menu -->
 		    		<!-- Format Bar -->
 		        <div id="drag_format_bar" class="draggable element1" draggable="true">
-		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all device">
+		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all text">
 		    	    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
 		    		<div>
 		    		    <i class="icon-bold"></i>
@@ -279,7 +293,7 @@
 		    		
 		    		<!-- Menu -->
 		        <div id="drag_menu" class="draggable element1" draggable="true">
-		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all device">
+		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all layout">
 		    	    <div id="libMenu" data-lib-width="500" data-lib-height="30">
 		    		<div>
 		    		    <div></div><div>Open</div><div></div>
