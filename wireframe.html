@@ -17,19 +17,76 @@
 	    <script src="js/qtip/jquery.qtip.min.js"></script>
 	    <script src="js/script.js"></script>
 	    <script src="js/search.js"></script>
-	    <script>
+	    <script type="text/javascript">
+		//   XY Coord
+		/* addressing the wonderful world of cross-browser event handling */
+		function fixE(e) { return e || window.event; }
+			
+		// Detect if the browser is IE or not.
+		// If it is not IE, we assume that the browser is NS.
+		var IE = document.all?true:false;
+
+		// If NS -- that is, !IE -- then set up for mouse capture
+		if (!IE) {
+		document.captureEvents(Event.MOUSEMOVE); }
+
+		// Set-up to use getMouseXY function onMouseMove
+		onmousemove = getPosition;
+			
+		function getPosition(e)
+			{ /* make sure to compensate for the different position value calculations in browsers */
+			  /* first we address browser differences for finding the event object */
+			  e = fixE(e);
+				
+				var position = {};
+			 
+			  if (e.pageX)
+				{
+				 position.x = e.pageX;
+				 position.y = e.pageY;
+
+				}		
+			  else
+				{
+				 position.x = e.clientX + document.documentElement.scrollLeft + document.body.scrollLeft;
+				 position.y = e.clientY + document.documentElement.scrollTop  + document.body.scrollTop;
+
+				}	
+				
+				// show the position values in the form named Show
+				// in the text fields named MouseX and MouseY
+				document.Show.MouseX.value = 23;
+				document.Show.MouseX.value = position.x;
+				document.Show.MouseY.value = position.y;
+ 
+			  return position;
+			}	
+			
+			//   Drag and Drop
+		
+
+			
 		    function dragDropStart(e)
 		    {
+			  /* first we address browser differences for finding the event object */
+			  e = fixE(e);
+			  
 		      e.dataTransfer.effectAllowed = "move";
 		      e.dataTransfer.setData("text/html", e.target.innerHTML);
 		    }
     
 		    function dragEnter(e)
 		    {	
+			  /* first we address browser differences for finding the event object */
+			  e = fixE(e);
+			  
 		      e.dataTransfer.dropEffect = "move";
 		    }
     
 		    function dragOver(e){
+			  /* first we address browser differences for finding the event object */
+			  e = fixE(e);
+			  
 		      if (e.preventDefault) {
 			      e.preventDefault();
 		      }
@@ -37,31 +94,16 @@
     
 		    function drop(e)
 		    {	
+				/* first we address browser differences for finding the event object */
+			  e = fixE(e);
+			  
 			    var html = e.dataTransfer.getData("text/html");
 			    e.target.innerHTML += html;
 		    }
 		    
-		    function addRecent(e)
-		    {
-			recent.push(e.id);
-			alert(e);
-		    }
 		    
-		    function toggleGrid() 
-		    {
-			var toggle = document.getElementById('canvasGrid');
-			
-			if (clicked) {
-			    clicked = false;
-			    toggle.style.background = "white";
-			}
-			else {
-			    toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
-			    clicked = true;
-			}
-		    }
 		    
-			// On Load function 
+			//  On Load function 
 		    window.onload = function () 
 		    { 
 		        document.getElementById("searchfield").onkeyup = function() {autoSuggest();}
@@ -93,6 +135,31 @@
 			   clicked = false;
 			
 		    };
+			
+			//   Trevor's Stuff
+			function addRecent(e)
+		    {
+			  /* first we address browser differences for finding the event object */
+			  e = fixE(e);
+			  
+			recent.push(e.id);
+			alert(e);
+		    }
+		    
+		    function toggleGrid() 
+		    {
+			var toggle = document.getElementById('canvasGrid');
+			
+			if (clicked) {
+			    clicked = false;
+			    toggle.style.background = "white";
+			}
+			else {
+			    toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
+			    clicked = true;
+			}
+		    }
+			
 		    </script>
     </head>
     <body>
@@ -130,8 +197,12 @@
 	
 	<section id="frame" >
 	    <header>&nbsp;</header>
+		<form id="Show" name="Show">
+				<input type="text" name="MouseX" id="MouseX" size="4"> X<br>
+				<input type="text" name="MouseY" id="MouseY" size="4"> Y<br>
+		</form>
 	    <section id="canvas">
-		<section class="grid" id="canvasGrid"></section>
+			<section class="grid" id="canvasGrid"></section>
 	    </section>
 	    <footer>&nbsp;</footer>
 	</section>
