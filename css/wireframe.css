@@ -686,6 +686,7 @@ section#canvas > section#pad{
 #matchList li
 {
 	list-style-type: none;
+	background-color: white;
 }
 
 .paletteTop {
