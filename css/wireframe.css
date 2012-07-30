@@ -178,6 +178,8 @@ section#canvas > section#pad{
 	height: 27px;
 	padding-right: 10px;
 	float:right;
+	position: relative;
+	z-index: 5;
 }
 
 /* Menu Bar */
