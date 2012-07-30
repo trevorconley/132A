@@ -57,6 +57,9 @@
 				// in the text fields named MouseX and MouseY
 				document.Show.MouseX.value = position.x;
 				document.Show.MouseY.value = position.y;
+				
+				document.whxy.xCoord.value = position.x;
+				document.whxy.yCoord.value = position.y;
  
 			  return position;
 			}	
@@ -215,11 +218,11 @@
 		    <fieldset data-category="coord">
 			<div class="paletteTop">
 			    <label id="width">w:</label> <input type="number" name="width" min="0" max="999"/>
-			    <label id="x">x:</label> <input type="number" name="x" min="0" max="999"/>
+			    <label id="x">x:</label> <input type="number" id="xCoord" name="xCoord" min="0" max="999"/>
 			</div>
 			<div class="paletteBottom">
 			    <label id="height">h:</label> <input type="number" name="height" min="0" max="999"/>
-			    <label id="y">y:</label> <input type="number" name="y" min="0" max="999"/>
+			    <label id="y">y:</label> <input type="number" id="yCoord" name="yCoord" min="0" max="999"/>
 			</div>
 		    </fieldset>
 		    
