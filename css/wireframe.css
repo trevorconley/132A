@@ -723,7 +723,9 @@ section#canvas > section#pad{
      width: 130px;
      overflow-y: scroll;
      overflow-x: hidden;
-     height: 100px;
+     /*height: 100px;*/
+     max-height: 100px;
+     min-height: 10px;
      -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.42);
      -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.42);
      box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.42);
