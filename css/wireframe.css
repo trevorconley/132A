@@ -683,6 +683,11 @@ section#canvas > section#pad{
 	user-select : none;
 }
 
+#matchList li
+{
+	list-style-type: none;
+}
+
 .paletteTop {
 	text-align: right;
 	margin-bottom: 5px;	

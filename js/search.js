@@ -5,27 +5,27 @@
                                "date picker", "list", "date stepper"];
 
         var associatedDivIds = new Array();
-        associatedDivIds["button"] = "sbtn";
-        associatedDivIds["browser"] = "libBrowserOuterFrame";
-        associatedDivIds["image"] = "libImage";
-        associatedDivIds["textfield"] = "libDummyContainer";
-        associatedDivIds["button bar"] = "libButtonBarBox";
-        associatedDivIds["search"] = "libSearchBox";
-        associatedDivIds["section title"] = "libHeaderBox";
-        associatedDivIds["checkbox"] = "libCheckBox";
-        associatedDivIds["radio button"] = "libRadioBox";
-        associatedDivIds["combobox"] = "libComboBox";
-        associatedDivIds["accordion"] = "libAccordin";
-        associatedDivIds["tab bar"] = "libTabber";
-        associatedDivIds["link bar"] = "libLinkbar";
-        associatedDivIds["vertical tab"] = "libVerticalTab";
-        associatedDivIds["table"] = "libTable";
-        associatedDivIds["format bar"] = "libFormatBar";
-        associatedDivIds["menu"] = "libMenu";
-        associatedDivIds["text box"] = "libTextBox";
-        associatedDivIds["date picker"] = "libDatePickerBox";
-        associatedDivIds["list"] = "libList";
-        associatedDivIds["date stepper"] = "libNumStepper";
+        associatedDivIds["button"] = "drag_button";
+        associatedDivIds["browser"] = "drag_browser";
+        associatedDivIds["image"] = "drag_image";
+        associatedDivIds["textfield"] = "drag_textfield";
+        associatedDivIds["button bar"] = "drag_button_bar";
+        associatedDivIds["search"] = "drag_search";
+        associatedDivIds["section title"] = "drag_section_title";
+        associatedDivIds["checkbox"] = "drag_checkbox";
+        associatedDivIds["radio button"] = "drag_radio_button";
+        associatedDivIds["combobox"] = "drag_combobox";
+        associatedDivIds["accordion"] = "rag_accordin";
+        associatedDivIds["tab bar"] = "drag_tab_bar";
+        associatedDivIds["link bar"] = "drag_link_bar";
+        associatedDivIds["vertical tab"] = "drag_vertical_tab";
+        associatedDivIds["table"] = "drag_table";
+        associatedDivIds["format bar"] = "drag_format_bar";
+        associatedDivIds["menu"] = "drag_menu";
+        associatedDivIds["text box"] = "drag_text_box";
+        associatedDivIds["date picker"] = "drag_date_picker";
+        associatedDivIds["list"] = "drag_list";
+        associatedDivIds["date stepper"] = "drag_date_stepper";
 
 
          var selected = "";
@@ -82,7 +82,7 @@
             if( m.length > 0 )
             {
             	displayArea.removeAttribute("style");
-         	    newUL.setAttribute("style", "background-color: #f0f0f0; width: 150px; margin-top: 0; padding-right: 0; padding-left: 0;");
+         	    newUL.setAttribute("style", "background-color: white; width: 150px; margin-top: 0; padding-right: 0; padding-left: 0; color: black");
          	}
          	else
          	{
@@ -126,7 +126,7 @@
         		{
         			window.selected = this.id;
 
-        			document.getElementById("frame").innerHTML += window.selected;
+        			document.getElementById("canvasGrid").innerHTML += document.getElementById(getComponentId(window.selected)).innerHTML;
 
         			setTimeout(function(){ removeElements(document.getElementById("outputResults"))},100);
         		}

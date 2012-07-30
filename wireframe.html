@@ -16,6 +16,7 @@
 	    <!--qtip script-->
 	    <script src="js/qtip/jquery.qtip.min.js"></script>
 	    <script src="js/script.js"></script>
+	    <script src="js/search.js"></script>
 	    <script>
 		    function dragDropStart(e)
 		    {
@@ -61,9 +62,10 @@
 			}
 		    }
 		    
-			<!-- On Load function -->
+			// On Load function 
 		    window.onload = function () 
 		    { 
+		        document.getElementById("searchfield").onkeyup = function() {autoSuggest();}
 		       document.getElementById("drag_button").addEventListener("dragstart",dragDropStart,false);
 		       document.getElementById("drag_browser").addEventListener("dragstart",dragDropStart,false);
 		       document.getElementById("drag_image").addEventListener("dragstart",dragDropStart,false);
@@ -127,7 +129,7 @@
 	    </nav>
 	</header>
 	
-	<section id="frame">
+	<section id="frame" >
 	    <header>&nbsp;</header>
 	    <section id="canvas">
 		<section class="grid" id="canvasGrid"></section>
@@ -198,7 +200,8 @@
 		    <form name="searchForm">
 			<div>
 			    <i class="icon-search icon-large icon-height"></i>
-			    <input name="searchfield" type="search" size="20" maxlength="30">
+			    <input name="searchfield" id="searchfield" type="search" size="20" maxlength="30">
+			    <div id="outputResults"></div>
 			</div>
 		    </form>
 		</div>
