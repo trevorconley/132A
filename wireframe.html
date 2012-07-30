@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
     <head>
 	    <meta charset="UTF-8">
 	    <meta name = "viewport" content = "user-scalable = no">
@@ -126,6 +127,81 @@
 		</ul>
 	    </nav>
 	</header>
+=======
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "user-scalable = no">
+	<title>Wireframe 3000&#8482;</title>
+	<link rel="stylesheet" type="text/css" href="css/wireframe.css" />
+	<link rel="stylesheet" href="fa/font-awesome.css" type="text/css" />
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="fa/font-awesome-ie7.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/lib/jquery-1.7.2.min.js"></script>
+	<!--qtip script-->
+	<script src="js/qtip/jquery.qtip.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/search.js"></script>
+	<script>
+		function dragDropStart(e)
+		{
+		  e.dataTransfer.effectAllowed = "move";
+		  e.dataTransfer.setData("text/html", e.target.innerHTML);
+		}
+
+		function dragEnter(e)
+		{	
+		  e.dataTransfer.dropEffect = "move";
+		}
+
+		function dragOver(e){
+		  if (e.preventDefault) {
+			  e.preventDefault();
+		  }
+		}
+
+		function drop(e)
+		{	
+			var html = e.dataTransfer.getData("text/html");
+			e.target.innerHTML += html;
+
+		}
+
+		window.onload = function () 
+		{ 
+		   document.getElementById("draggableElement1").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement2").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement3").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement4").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement5").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement6").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement7").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement8").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement9").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement10").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement11").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement12").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement13").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement14").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement15").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement16").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement17").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement18").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement19").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement20").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("draggableElement21").addEventListener("dragstart",dragDropStart,false);
+		   document.getElementById("frame").addEventListener("dragenter",dragEnter,false);
+		   document.getElementById("frame").addEventListener("dragover",dragOver,false);
+		   document.getElementById("frame").addEventListener("drop",drop,false);
+
+		};
+		</script>
+</head>
+	<body>
+>>>>>>> had to push this in order to pull
 	
 	<section id="frame">
 	    <header>&nbsp;</header>
@@ -375,6 +451,7 @@
 				    <li>Tab 2</li>
 				    <li>Tab 3</li>
 				</ul>
+<<<<<<< HEAD
 				<div>Item One</div>
 			    </div>
 			    <div class="title">Tab Bar</div>
@@ -476,6 +553,23 @@
 			    <div id="libDatePickerBox" data-lib-width="100" data-lib-height="30">
 				<div id="libDatePickerContainer">
 				    12/1/2012
+=======
+			</footer>
+		</section>
+		         
+		<!--LIBRARY STARTS HERE -->
+		
+		<section id="library">
+			<header>
+				<div id="searchBox">
+				<form name="searchForm">
+					<div>
+						<i class="icon-search icon-large icon-height"></i>
+						<input name="searchfield" id="searchfield" type="search" size="20" maxlength="30">
+						<div id="outputResults"></div>
+					</div>
+				</form>
+>>>>>>> had to push this in order to pull
 				</div>
 				<i class="icon-calendar" style="padding-left:5px"></i>
 			    </div>
