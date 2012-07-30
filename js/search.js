@@ -4,7 +4,7 @@
                                "button bar", "search", "section title", "checkbox", 
                                "radio button", "combobox", "accordion", "tab bar", "link bar",
                                "vertical tab", "table", "format bar", "menu", "text box", 
-                               "date picker", "list", "date stepper"];
+                               "date picker", "list", "date stepper", 'mobile'];
 
         var associatedDivIds = new Array();
         associatedDivIds["button"] = "drag_button";
@@ -28,6 +28,7 @@
         associatedDivIds["date picker"] = "drag_date_picker";
         associatedDivIds["list"] = "drag_list";
         associatedDivIds["date stepper"] = "drag_date_stepper";
+        associatedDivIds["mobile"] = "drag_mobile";
 
 
          var selected = "";
