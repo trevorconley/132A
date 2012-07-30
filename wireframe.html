@@ -43,8 +43,7 @@
 		    
 		    function addRecent(e)
 		    {
-			recent = [];
-			recent.push(e);
+			recent.push(e.id);
 			alert(e);
 		    }
 		    
@@ -91,7 +90,7 @@
 		       document.getElementById("frame").addEventListener("dragenter",dragEnter,false);
 		       document.getElementById("frame").addEventListener("dragover",dragOver,false);
 		       document.getElementById("frame").addEventListener("drop",drop,false);
-			clicked = false;
+			   clicked = false;
 			
 		    };
 		    </script>
@@ -195,6 +194,8 @@
 	<!--LIBRARY STARTS HERE -->
 	
 	<section id="library">
+
+		<!-- SEARCH BOX -->
 	    <header>
 		<div id="searchBox">
 		    <form name="searchForm">
@@ -212,10 +213,10 @@
 		<nav>
 		    <ul>
 			<li class="pointer selected" data-category="all">All</li>
-			<li class="pointer" data-category="device">Device</li>
+			<li class="pointer" data-category="device">Device and Menu</li>
 			<li class="pointer" data-category="button">Button</li>
 			<li class="pointer" data-category="text">Text</li>
-			<li class="pointer" data-category="menu">Menu</li>
+		<!--	<li class="pointer" data-category="menu">Menu</li>-->
 			<li class="pointer" data-category="forms">Forms</li>
 			<li class="pointer" data-category="layout">Layout</li>
 			<li class="pointer" data-category="recently">Recently Used</li>
@@ -254,6 +255,42 @@
 			    <div class="title">Browser</div>
 			</div>
 		    </div>
+
+		        <!-- menu -->
+		    		<!-- Format Bar -->
+		        <div id="drag_format_bar" class="draggable element1" draggable="true">
+		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all device">
+		    	    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
+		    		<div>
+		    		    <i class="icon-bold"></i>
+		    		    <i class="icon-italic"></i>
+		    		    <i class="icon-underline"></i>
+		    		    <i class="icon-strikethrough"></i>
+		    		    <div>style<i class="icon-caret-down"></i></div>
+		    		    <i class="icon-list-ul"></i>
+		    		    <i class="icon-list-ol"></i>
+		    		    <i class="icon-undo"></i>
+		    		    <i class="icon-repeat"></i>
+		    		</div>
+		    	    </div>
+		    	    <div class="title">Format bar</div>
+		    	</div>
+		        </div>
+		    		
+		    		<!-- Menu -->
+		        <div id="drag_menu" class="draggable element1" draggable="true">
+		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all device">
+		    	    <div id="libMenu" data-lib-width="500" data-lib-height="30">
+		    		<div>
+		    		    <div></div><div>Open</div><div></div>
+		    		    <div></div><div>Open</div><div></div>
+		    		    <div></div><div>Open</div><div></div>
+		    		    <div></div><div>Open</div><div></div>
+		    		</div>
+		    	    </div>
+		    	    <div class="title">Menu</div>
+		    	</div>
+		        </div>
 		    
 		    <!-- image -->
 		    <div id="drag_image" class="draggable element1" draggable="true">
@@ -441,41 +478,7 @@
 			</div>
 		    </div>
 					    
-		    <!-- menu -->
-				<!-- Format Bar -->
-		    <div id="drag_format_bar" class="draggable element1" draggable="true">
-			<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
-			    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
-				<div>
-				    <i class="icon-bold"></i>
-				    <i class="icon-italic"></i>
-				    <i class="icon-underline"></i>
-				    <i class="icon-strikethrough"></i>
-				    <div>style<i class="icon-caret-down"></i></div>
-				    <i class="icon-list-ul"></i>
-				    <i class="icon-list-ol"></i>
-				    <i class="icon-undo"></i>
-				    <i class="icon-repeat"></i>
-				</div>
-			    </div>
-			    <div class="title">Format bar</div>
-			</div>
-		    </div>
-				
-				<!-- Menu -->
-		    <div id="drag_menu" class="draggable element1" draggable="true">
-			<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all menu">
-			    <div id="libMenu" data-lib-width="500" data-lib-height="30">
-				<div>
-				    <div></div><div>Open</div><div></div>
-				    <div></div><div>Open</div><div></div>
-				    <div></div><div>Open</div><div></div>
-				    <div></div><div>Open</div><div></div>
-				</div>
-			    </div>
-			    <div class="title">Menu</div>
-			</div>
-		    </div>
+
 		    
 		    <!-- Forms Section -->
 				<!-- Text Box -->

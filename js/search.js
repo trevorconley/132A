@@ -1,3 +1,5 @@
+        var recent = [];
+
         var componentsArray = ["button", "browser", "image", "textfield", 
                                "button bar", "search", "section title", "checkbox", 
                                "radio button", "combobox", "accordion", "tab bar", "link bar",
@@ -127,6 +129,7 @@
         			window.selected = this.id;
 
         			document.getElementById("canvasGrid").innerHTML += document.getElementById(getComponentId(window.selected)).innerHTML;
+                    window.recent[window.recent.length] = document.getElementById(getComponentId(window.selected)).innerHTML;
 
         			setTimeout(function(){ removeElements(document.getElementById("outputResults"))},100);
         		}
