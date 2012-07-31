@@ -236,7 +236,6 @@ section#canvas > section#pad{
 .inDropZone:hover
 {
 	background-color: grey;
-	width: auto;
 }
 .drag, .element1 {
 	float:left;
