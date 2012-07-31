@@ -198,6 +198,11 @@ section#canvas > section#pad{
 	float:left;
 }
 
+.drag, .inDropZone
+{
+	position: relative;
+}
+
 /* Library Divs */
 
 .resizeable{
@@ -222,8 +227,17 @@ section#canvas > section#pad{
 #shell{
 	height:inherit;
 }
-
-.element1 {
+.inDropZone 
+{
+	position: relative;
+	padding: 20px;
+	width: auto;
+}
+.inDropZone:hover
+{
+	background-color: grey;
+}
+.drag, .element1 {
 	float:left;
 	width: auto;
 	height: 73px;
@@ -236,6 +250,7 @@ section#canvas > section#pad{
 	border-radius: 10px;
 	overflow: hidden;
 	max-width: 250px;
+	position: relative;
 }
 .element1:hover {
 	border-color: yellow;
