@@ -41,19 +41,19 @@
 					<ul>
 						<li><a href="#"><i class="icon-bolt" style="padding-right:5px"></i>Render Page <span style="padding-left: 30px; display:inline">ctrl-r</span></a></li>
 						<li><a href="#"><i class="icon-signout" style="padding-right:5px"></i>Export Image <span style="padding-left: 23px; display:inline">ctrl-e</span></a></li>
+						<li><a href="#" onclick="save()">Save</a></li>
+						<li><a href="#" onclick="load()">Load</a></li>
 					</ul></li>
 					<li class="topmenu"><a href="#" style="height:10px;line-height:10px;"><span>Edit</span></a>
 					<ul>
-            <li><a href="#"><i class="icon-copy" style="padding-right:5px;"></i>Copy <span style="padding-left: 20px; display:inline-block;">ctrl-c</span></a></li>
+						<li><a href="#"><i class="icon-copy" style="padding-right:5px;"></i>Copy <span style="padding-left: 20px; display:inline-block;">ctrl-c</span></a></li>
 						<li><a href="#"><i class="icon-cut" style="padding-right:5px"></i>Cut <span style="padding-left: 30px; display:inline;">ctrl-x</span></a></li>
 						<li><a href="#"><i class="icon-paste" style="padding-right:5px"></i>Paste <span style="padding-left: 18px; display:inline;">ctrl-v</span></a></li>
 					</ul></li>
-					<li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>Working Functions</span></a>
+					<li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>View</span></a>
 					<ul>
-						<li><a href="#"onclick="undo()">Undo</a></li>
-						<li><a href="#"onclick="redo()">Redo</a></li>
-						<li><a href="#"onclick="save()">Save</a></li>
-						<li><a href="#"onclick="load()">Load</a></li>
+						<li><a href="#" onclick="toggleGrid()">Toggle Grid</a></li>
+						<li><a href="#" onclick="toggleAttributes()">Toggle Attributes</a></li>
 					</ul></li>
 				</ul>
 			</nav>
@@ -148,22 +148,23 @@
 			</section>
 			<section id="elements">
 				<div id="elementContainer">
+				  
 					<div class="draggable element1">
-						<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">bbb
-         				</div>
+						<div id="button" class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">button</div>
 					</div>
 					<div id="w0" class="draggable element1" data-category="all">asdsd</div>
 
-					<img id="w1" class="draggable element1" src="images/button bar.png" data-category="all"/>
-					<img id="w2" class="draggable element1" src="images/tab container.png" data-category="all"/>
-					<img id="w3" class="draggable element1" src="images/square.png" data-category="all"/>
-					<img id="w4" class="draggable element1" src="images/rounded rectangles.png" data-category="all"/>
-					<img id="w5" class="draggable element1" src="images/circle.png" data-category="all"/>
-					<div id="w6" class="draggable element1" data-category="all"/>	
-						<img src="images/horizontal scrollbar.png"/>
+					<img id="w1" class="draggable element1" src="images/button_bar.png" data-category="all button" alt="buttonBar"/>
+					<img id="w2" class="draggable element1" src="images/tab_container.png" data-category="all layout" alt="tabContainer"/>
+					<img id="w3" class="draggable element1" src="images/square.png" data-category="all" alt="square"/>
+					<img id="w4" class="draggable element1" src="images/rounded_rectangles.png" data-category="all layout" alt="rect"/>
+					<img id="w5" class="draggable element1" src="images/circle.png" data-category="all" alt="circle"/>
+					<div id="w6" class="draggable element1" data-category="all">	
+					  <img src="images/horizontal_scrollbar.png" alt="scrollbar"/>
 					</div>
-					<img id="w7" class="draggable element1" src="images/vertical scrollbar.png" data-category="all"/>
-
+					<div id="w7" class="draggable element1">
+					<img src="images/vertical_scrollbar.png" data-category="all" alt="vertScroll"/>
+					</div>
 				</div>
 			</section>	
 		</section>
@@ -174,6 +175,6 @@
 			dropObject.initDrop('w7');
 			initPalette('palette');
 			prevent('preventt');
-		</script
+		</script>
 	</body>
 </html>

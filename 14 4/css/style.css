@@ -60,14 +60,12 @@ section#canvas{
 section#canvas > section#pad{
 	position : relative;
 	border : 1px ridge #ececec;
-    box-shadow: 3px 3px 5px whitesmoke;
-    min-width : 100px;
-    min-height : 100px;
-    background : #fff;
-    width : 100%;
-    height : 100%;
-	background:url(../images/grid_20px.gif);
-	background-repeat:repeat;
+	box-shadow: 3px 3px 5px whitesmoke;
+	min-width : 100px;
+	min-height : 100px;
+	background : #fff;
+	width : 100%;
+	height : 100%;
 }
 
 /* canvas */
