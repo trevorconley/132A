@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Search Function</title>
+  </head>
+     <style>
+        #matchList li 
+        {
+        	list-style-type: none;
+        	margin: 0;
+        	padding-bottom: 10px;
+        	padding-left: 10px;
+        	padding-top: 10px;
+        	border-bottom-style: solid;
+        	border-bottom-color: #DEDEDE;
+        	border-bottom-width: 1px;
+        }
+        #matchList li:hover 
+        {
+        	background-color: #FAFAFA;
+        }
+        #searchbox
+        {
+        	width: 158px;
+        }
+        #outputResults
+        {
+        	max-height: 120px;
+        	overflow: auto;
+        	width: 165px;
+        	-moz-box-shadow: 1px 1px 1px #d6d6d6;
+        	-webkit-box-shadow: 1px 1px 1px #d6d6d6; 
+        	box-shadow: 1px 1px 1px #d6d6d6;
+        	background-color: #f0f0f0;
+        }
+     </style>
+     <script>
+        var componentsArray = ["button", "browser", "image", "textfield", 
+                               "button bar", "search", "section title", "checkbox", 
+                               "radio button", "combobox", "accordion", "tab bar", "link bar",
+                               "vertical tab", "table", "format bar", "menu", "text box", 
+                               "date picker", "list", "date stepper"];
+
+
+         var selected = "";
+
+         function findSequence(s)
+         {
+         	if( s.charAt(0) === " " || s === "" ) 
+         		return "";
+
+         	var i;
+         	var matches = [];
+         	for( i = 0; i < componentsArray.length; i++ )
+         	{
+         		// if the component name contains the sequence, store the component in the array matches
+         		if( componentsArray[i].indexOf(s) !== -1 )
+         		{
+         			matches[matches.length] = componentsArray[i];
+         		}
+         	}
+
+            if( matches.length === 0 )
+            {
+            	return "";
+            }
+
+         	return matches;
+         }
+
+         function printMatches(m)
+         {
+         	// If there was a previous suggestion, get rid of it by deleting 
+         	// all of the nodes associated with it. 
+          	var displayArea = document.getElementById("outputResults");
+            removeElements(displayArea);
+
+         	// Create an ul with the matches 
+         	var newUL = document.createElement("ul");
+         	newUL.setAttribute("id", "matchList");
+         	displayArea.appendChild(newUL);
+
+         	// go through each match and make it a li 
+         	var i;
+         	var newLi; 
+         	for( i = 0; i < m.length; i++ )
+         	{
+                newLi = document.createElement("li");
+                newLi.setAttribute("id", m[i]);
+                newUL.appendChild(newLi);
+                newText = document.createTextNode(m[i]);
+                newLi.appendChild(newText);
+         	}
+
+            if( m.length > 0 )
+            {
+            	displayArea.removeAttribute("style");
+         	    newUL.setAttribute("style", "background-color: #f0f0f0; width: 150px; margin-top: 0; padding-right: 0; padding-left: 0;");
+         	}
+         	else
+         	{
+         		newUL.removeAttribute("style");
+         		displayArea.setAttribute("style", "display: none;");
+         	}
+         }
+
+        function removeElements(da)
+        {
+        	// determine if a list has already been generated 
+        	if( da.childElementCount > 0 )
+        	{
+        		// If a list has already been created, then remove the 
+        		// elements
+        		while( da.childElementCount !== 0 )
+        		{
+        	        da.removeChild(da.firstChild);
+        		}
+        	}
+
+        }
+
+        function autoSuggest()
+        {
+         		printMatches(findSequence(document.getElementById("searchbox").value));
+
+        		var curNode = document.getElementById("matchList");
+        		var numChildren = curNode.childElementCount;
+        		curNode = curNode.firstChild;
+        		for( var i = 0; i < numChildren; i++ )
+        		{
+        			curNode.onmousedown = function()
+        			{
+        				window.selected = this.id;
+
+        				document.getElementById("wireframeCanvas").innerHTML += window.selected;
+
+        				setTimeout(function(){ removeElements(document.getElementById("outputResults"))},100);
+        			}
+        			curNode = curNode.nextSibling;
+        		}       	
+        }
+
+        // figuring out how to manipulate the form elements
+        window.onload = function()
+        {
+        	// when the page has fully loaded determine what the method property equals of the form called wireframSearch
+        	document.getElementById("searchbox").onkeyup = function() 
+        	{
+        		autoSuggest();
+        	}
+        }
+     </script>
+  <body>
+  	<!-- A Simple Form -->
+  	<form id="wireframeSearch" name="wireframeSearch" method="get">
+  		<input type="text" id="searchbox" name="searchbox" autocomplete="off">
+  	</form>
+
+  	<!-- Where the output will go -->
+    <div id="outputResults" name="outputResults"></div>
+    <div id="wireframeCanvas" name="wireframeCanvas"></div>
+
+  </body>
+</html>

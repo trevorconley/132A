@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "user-scalable = no">
+	<title>Wireframe 3000&#8482;</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="fa/font-awesome.css" type="text/css" />
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="fa/font-awesome-ie7.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/canvas.js"></script>
+	<script src="js/lib/jquery-1.7.2.min.js"></script>
+	<!--qtip script-->
+	<script src="js/qtip/jquery.qtip.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/search.js"></script>
+
+	<script>
+	window.onload = function () 
+    { 
+		document.getElementById("searchfield").onkeyup = function() {autoSuggest();}
+			
+	};
+	</script>
+
+</head>
+	<body>
+	
+<header id="toolbar">
+            <section id="logo">
+				<img src="images/logo.png" alt="wireframe 3000">
+                <h2> Wireframe 3000&trade; </h2>
+			</section>
+			<nav>
+				<ul id="css3menu1" class="topmenu" style="width: 300px">
+					<li class="topfirst"><a href="#" style="height:10px;line-height:10px;"><span>File</span></a>
+					<ul>
+						<li><a href="#"><i class="icon-bolt" style="padding-right:5px"></i>Render Page <span style="padding-left: 30px; display:inline">ctrl-r</span></a></li>
+						<li><a href="#"><i class="icon-signout" style="padding-right:5px"></i>Export Image <span style="padding-left: 23px; display:inline">ctrl-e</span></a></li>
+						<li><a href="#" onclick="save()">Save</a></li>
+						<li><a href="#" onclick="load()">Load</a></li>
+					</ul></li>
+					<li class="topmenu"><a href="#" style="height:10px;line-height:10px;"><span>Edit</span></a>
+					<ul>
+						<li><a href="#"><i class="icon-copy" style="padding-right:5px;"></i>Copy <span style="padding-left: 20px; display:inline-block;">ctrl-c</span></a></li>
+						<li><a href="#"><i class="icon-cut" style="padding-right:5px"></i>Cut <span style="padding-left: 30px; display:inline;">ctrl-x</span></a></li>
+						<li><a href="#"><i class="icon-paste" style="padding-right:5px"></i>Paste <span style="padding-left: 18px; display:inline;">ctrl-v</span></a></li>
+					</ul></li>
+					<li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>View</span></a>
+					<ul>
+						<li><a href="#" onclick="toggleGrid()">Toggle Grid</a></li>
+						<li><a href="#" onclick="toggleAttributes()">Toggle Attributes</a></li>
+					</ul></li>
+				</ul>
+			</nav>
+		</header>	
+		<section id="frame">
+				<header>&nbsp;</header>
+				<section id="canvas">
+					<section id="pad"></section>
+				</section>
+				<footer>&nbsp;</footer>
+		</section>
+
+		<!--PALETTE STARTS HERE -->
+
+		<section id="palette">
+			<header><i class="icon-remove-circle icon-large"></i>Attributes</header>
+			<form id="whxy">
+				<div id="palletContainer" style="text-align:center; display:table-cell; padding-left: 30px;">
+					<fieldset data-category="coord">
+						<div class="paletteTop">
+						<label>w:</label> <input id="widthIn" type="number" name="width" min="0" max="999"/>
+						<label>x:</label> <input id="xIn" type="number" name="x" min="0" max="999"/>
+						</div>
+						<div class="paletteBottom">
+						<label>h:</label> <input id="heightIn" type="number" name="height" min="0" max="999"/>
+						<label>y:</label> <input id="yIn" type="number" name="y" min="0" max="999"/>
+						</div>
+					</fieldset>
+					<fieldset data-category="text">
+						<div class="paletteTop">
+							<i class="icon-bold icon-large"></i>
+							<i class="icon-italic icon-large"></i>
+							<i class="icon-underline icon-large"></i>
+							<i class="icon-strikethrough icon-large"></i>
+							<div><span>style</span><i class="icon-caret-down"></i></div>						
+						</div>
+						<div class="paletteBottom">
+
+						</div>
+					</fieldset>
+					<fieldset data-category="action">
+						<div class="paletteTop">
+							<i class="icon-undo icon-large"></i>
+							<i class="icon-repeat icon-large"></i>
+							<i class="icon-lock icon-large"></i>
+							<i class="icon-group icon-large"></i>	
+							<i class="icon-remove icon-large"></i>				
+						</div>
+						<div class="paletteBottom">
+
+						</div>
+					</fieldset>
+                </div>
+			</form>
+			<footer>
+				<span id="preventt">Options:</span>
+				<ul>
+					<li class="pointer selected" data-category="coord">Coordinates</li>
+					<li class="pointer" data-category="text">Font</li>
+					<li class="pointer" data-category="action">Action</li>
+				</ul>
+			</footer>
+		</section>
+		         
+		<!--LIBRARY STARTS HERE -->
+		
+		<section id="library">
+			<header>
+				<div id="searchBox">
+				<form name="searchForm">
+					<div>
+						<i class="icon-search icon-large icon-height"></i>
+						<input name="searchfield" id="searchfield" type="search" size="20" maxlength="30" autocomplete="off">
+						<div id="outputResults"></div>
+					</div>
+				</form>
+				</div>
+			</header>
+			<section id="tabs">
+				<nav>
+					<ul>
+						<li class="pointer selected" data-category="all">All</li>
+						<li class="pointer" data-category="device">Device</li>
+						<li class="pointer" data-category="button">Button</li>
+						<li class="pointer" data-category="text">Text</li>
+						<li class="pointer" data-category="menu">Menu</li>
+						<li class="pointer" data-category="forms">Forms</li>
+						<li class="pointer" data-category="layout">Layout</li>
+						<li class="pointer" data-category="recently">Recently Used</li>
+					</ul>
+				</nav>
+			</section>
+			<section id="elements">
+				<div id="elementContainer">
+				  
+					<div class="draggable element1">
+						<div id="button" class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">button</div>
+					</div>
+					<div id="w0" class="draggable element1" data-category="all">asdsd</div>
+
+					<img id="w1" class="draggable element1" src="images/button_bar.png" data-category="all button" alt="buttonBar"/>
+					<img id="w2" class="draggable element1" src="images/tab_container.png" data-category="all layout" alt="tabContainer"/>
+					<img id="w3" class="draggable element1" src="images/square.png" data-category="all" alt="square"/>
+					<img id="w4" class="draggable element1" src="images/rounded_rectangles.png" data-category="all layout" alt="rect"/>
+					<img id="w5" class="draggable element1" src="images/circle.png" data-category="all" alt="circle"/>
+					<div id="w6" class="draggable element1" data-category="all">	
+					  <img src="images/horizontal_scrollbar.png" alt="scrollbar"/>
+					</div>
+					<div id="w7" class="draggable element1">
+					<img src="images/vertical_scrollbar.png" data-category="all" alt="vertScroll"/>
+					</div>
+				</div>
+			</section>	
+		</section>
+		<script>
+			dropObject.initDrop('w0');
+			dropObject.initDrop('w1');
+			dropObject.initDrop('w6');
+			dropObject.initDrop('w7');
+			initPalette('palette');
+			prevent('preventt');
+		</script>
+	</body>
+</html>
