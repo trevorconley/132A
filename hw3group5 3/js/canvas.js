@@ -788,27 +788,17 @@ window.onload = function() {
 		//var script = JSON.stringify(live_widgets);
 		script.src = 'http://198.101.235.162/' + document.getElementById('action').value + '?groupKey=' + encodeURIComponent(groupKey) + '&dataKey=' + encodeURIComponent(dataKey) + '&content=' + encodeURIComponent(dataContent) + '&respVarName=serverResponse';
 		if(document.getElementById('action').value == "load") {
-			alert("Loading...");
-			loading = true;
+		    alert('Your file has loaded. Click OK to view it.')
 			
 			var old =  getElementsByClass('active');
 			for (var i in old){
 				old[i].style.visibility = 'hidden';
 			}
-			
-				var data = JSON.parse(document.getElementById('pad').appendChild(script));
-				for (var i in data)
-				{
-					addWidget(data[i].origin,data[i].left,data[i].top,data[i].width,data[i].height,data[i].text);
-
-				}
 		}
-		else if (document.getElementById('action').value == "save")
+		if (document.getElementById('action').value == "save")
 		    alert('Your file is saved as "' + dataKey  + '." Please remember this name.')
-		script.onload = function() {
-			console.log(serverResponse);
-			console.log(JSON.parse(serverResponse));
-		};
+		if (document.getElementById('action').value == "erase")
+		    alert(dataKey  + ' has been deleted.')
 		document.getElementById('canvas').appendChild(script);
 		e.returnValue = false;
 		return false;
