@@ -24,7 +24,6 @@
 	    //========================================================================================//
 		//   XY Coord //
 		/* addressing the wonderful world of cross-browser event handling */
-		var clicked;
 		
 		function fixE(e) { return e || window.event; }
 			
@@ -125,19 +124,36 @@
 			alert(e);
 		    }
 		    
+		    var gridToggled = false;
+		    var attToggled = false;
+		
 		    function toggleGrid() 
 		    {
 			var toggle = document.getElementById('canvasGrid');
 			
-			if (clicked) {
-			    clicked = false;
+			if (gridToggled) {
+			    gridToggled = false;
 			    toggle.style.background = "white";
 			}
 			else {
-			    toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
-			    clicked = true;
+				toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
+				gridToggled = true;
 			}
-		    } 
+		    }
+		    
+		    function toggleAttributes() 
+		    {
+			var toggle = document.getElementById('palette');
+			
+			if (attToggled) {
+			    attToggled = false;
+			    toggle.style.display = 'inline';
+			}
+			else {
+				toggle.style.display = 'none';
+				attToggled = true;
+			}
+		    }
 			
 		    </script>
     </head>
@@ -165,7 +181,7 @@
 		    </li>
 		    <li class="toplast"><a href="#" style="height:10px;line-height:10px;"><span>View</span></a>
 			<ul>
-			    <li><a href="#"><i class="icon-info-sign" style="padding-right:5px"></i>Toggle Attributes Window <span style="padding-left: 10px; display:inline;">ctrl-a</span></a></li>
+			    <li><a href="#" onclick="toggleAttributes()"><i class="icon-info-sign" style="padding-right:5px"></i>Toggle Attributes Window <span style="padding-left: 10px; display:inline;">ctrl-a</span></a></li>
 			    <li><a href="#" onclick="toggleGrid()"><i class="icon-th" style="padding-right:5px"></i>Toggle Grid <span style="padding-left: 105px; display:inline;">ctrl-g</span></a></li>
 			    <li><a href="#"><i class="icon-print" style="padding-right:5px"></i>Print View <span style="padding-left: 115px; display:inline;">ctrl-p</span></a></li>
 			</ul>
@@ -189,7 +205,7 @@
 	<!--PALETTE STARTS HERE -->
 	
 	<section id="palette" class="drag">
-	    <header id="draggableElement22"><i class="icon-remove-circle icon-large"></i>Attributes</header>
+	    <header id="draggableElement22"><i class="icon-remove-circle icon-large" onclick="toggleAttributes()"></i>Attributes</header>
 	    <form id="whxy">
 		<div id="palletContainer" style="text-align:center; display:table-cell; padding-left: 30px;">
 		    <fieldset data-category="coord">
@@ -475,7 +491,7 @@
 				<div>Item Two</div>
 				<div>Item Three</div>
 			    </div>
-			    <div class="title">Accordin</div>
+			    <div class="title">Accordion</div>
 			</div>
 		    </div>
 				<!-- Tab Bar -->
