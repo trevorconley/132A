@@ -24,9 +24,13 @@
 	    //========================================================================================//
 		//   XY Coord //
 		/* addressing the wonderful world of cross-browser event handling */
+<<<<<<< HEAD
 
 		var clicked = false;
 
+=======
+		var clicked = false;
+>>>>>>> drag and drop done
 		
 		function fixE(e) { return e || window.event; }
 			
@@ -80,7 +84,9 @@
 			//========================================================================================//
 			//                             DRAG AND DROP                                              //
 			//========================================================================================//
-			var geekOps_clone;
+			var droppedList = [];
+			var targetInfo;
+			// get dimensions
 			$(document).ready( function() 
 			    {
 			    	// draggable function
@@ -88,26 +94,47 @@
 			    	     {
 			    	     	revert: true,
 			    	     	helper: "clone"
-			    	     }
+			    	    }
 			    	); // end draggable
 
-                    // droppable funtion
 			    	$("#canvasGrid").droppable(
-			    	    {
-			    	    	accept: ".draggable",
-			    	    	
-			    	    	// deals with what happens on drop
-			    	    	drop: function(e, ui)
-			    	    	{
-			    	    		var dropElemId = ui.draggable.attr("id");
-			    	    		var dropElem = ui.draggable.html();
-			    	    		geekOps_clone = $(dropElem).clone();
-			    	    		$("canvasGrid").append(dropElem);
-			    	    	} // end drop function
-			    	    }
-			    	); // end droppable
+			    	   {
+			    		drop: function(e, ui)
+			    		{
+			    			var dropElemId = ui.draggable.attr("id");
+			    			droppedList.push(dropElemId);
+			    			addWidget(dropElemId);
+
+			    			$(".onCanvas").draggable();
+			    		}
+			    	  }
+			    	);
 			    }
 			); // end ready
+
+			function addWidget(droppedId)
+			{
+				var classList = document.getElementById(droppedId).className.split(/\s+/);
+				var i;
+				var isOnCanvas = false;
+				for( i = 0; i < classList.length; i++ )
+				{
+					if( classList[i] === "onCanvas" )
+					{
+						isOnCanvas = true;
+						break;
+					}
+				}
+
+				if( !isOnCanvas )
+				{
+					var newNode = document.createElement("div");
+					newNode.setAttribute("class", "onCanvas");
+					newNode.innerHTML = document.getElementById(droppedId).innerHTML;
+					document.getElementById("canvasGrid").appendChild(newNode);
+				}
+
+			}
 
 			//========================================================================================//
 			//                             ON LOAD FUNCTION                                           //
@@ -502,17 +529,14 @@
 		    </div>
 		    
 		    <!-- layout -->
-<<<<<<< HEAD
 				<!-- accordion -->
 		    <div id="drag_accordion" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
 			    <div id="libaccordion" data-lib-width="200" data-lib-height="150">
-=======
 				<!-- Accordin -->
 		    <div id="drag_accordin" class="draggable element1 drag" draggable="true">
 			<div class="dnd resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
 			    <div id="libAccordin" data-lib-width="200" data-lib-height="150">
->>>>>>> drag
 				<div>Item One</div>
 				<div class="expand"></div>
 				<div>Item Two</div>
