@@ -65,8 +65,8 @@
 				document.Show.MouseY.value = position.y;
 				
 
-				document.getElementById("whxy").xCoord.value = position.x;
-				document.getElementById("whxy").yCoord.value = position.y;
+				//document.getElementById("whxy").xCoord.value = position.x;
+				//document.getElementById("whxy").yCoord.value = position.y;
 
 				//document.whxy.xCoord.value = position.x;
 				//document.whxy.yCoord.value = position.y;
@@ -78,7 +78,7 @@
 			//========================================================================================//
 			//                             DRAG AND DROP                                              //
 			//========================================================================================//
-			$(function() {
+			/*$(function() {
 				$( ".drag" ).draggable({ revert: "invalid" });
 
 				$( "#canvasGrid" ).droppable({
@@ -91,7 +91,7 @@
 								.html( "Dropped!" );
 					}
 				});
-			});
+			});*/
 
 			//========================================================================================//
 			//                             ON LOAD FUNCTION                                           //
@@ -279,7 +279,7 @@
 		<div id="elementContainer">
 		    
 		 <!-- button -->
-		    <div id="drag_button" class="drag" draggable="true">		
+		    <div id="drag_button" class="draggable element1 drag" draggable="true">		
 			<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">
 			    <div id="sbtn" data-lib-width="108" data-lib-height="20">
 				<span class="sbtntext">Button Text</span>
@@ -290,7 +290,7 @@
 		    
 		    
 		    <!-- browser -->
-		    <div id="drag_browser" class="drag" draggable="true">
+		    <div id="drag_browser" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
 			    <div id="libBrowserOuterFrame" data-lib-width="760" data-lib-height="350">
 				<div id="libBrowserHeader">
@@ -308,7 +308,7 @@
 
             
             <!-- Mobile -->
-            <div id="drag_mobile" class="drag" draggable="true">
+            <div id="drag_mobile" class="draggable element1 drag" draggable="true">
             <div class="resizeable" data-default-width="150" data-default-height="150" data-category="all device">
             	<img src="mobile.png" alt="mobile">
                 <div class="title">Mobile</div>
@@ -316,7 +316,7 @@
               </div>
 
              <!-- Tablet -->
-             <div id="drag_tablet" class="drag" draggable="true">
+             <div id="drag_tablet" class="draggable element1 drag" draggable="true">
              <div class="resizeable" data-default-width="150" data-default-height="150" data-category="all device">
 
                  <div class="title">Tablet</div>
@@ -325,7 +325,7 @@
 
 		        <!-- menu -->
 		    		<!-- Format Bar -->
-		        <div id="drag_format_bar" class="drag" draggable="true">
+		        <div id="drag_format_bar" class="draggable element1 drag" draggable="true">
 		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all text">
 		    	    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
 		    		<div>
@@ -345,7 +345,7 @@
 		        </div>
 		    		
 		    		<!-- Menu -->
-		        <div id="drag_menu" class="drag" draggable="true">
+		        <div id="drag_menu" class="draggable element1 drag" draggable="true">
 		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all layout">
 		    	    <div id="libMenu" data-lib-width="500" data-lib-height="30">
 		    		<div>
@@ -360,7 +360,7 @@
 		        </div>
 		    
 		    <!-- image -->
-		    <div id="drag_image" class="drag" draggable="true">
+		    <div id="drag_image" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="150" data-default-height="150" data-category="all image">
 			    <div id="libImage" data-lib-width="150" data-lib-height="150">
 				
@@ -370,7 +370,7 @@
 		    </div>
 		    
 		    <!-- text area -->
-		    <div id="drag_textfield" class="drag" draggable="true">
+		    <div id="drag_textfield" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all text">
 			    <div id="libDummyContainer" data-lib-width="200" data-lib-height="150">
 				<div> <!-- id="libDummyText"> --> <!-- removed so we can have only the text area show -->
@@ -382,7 +382,7 @@
 		    </div>
 		    
 		    <!-- button bar -->
-		    <div id="drag_button_bar" class="drag" draggable="true">
+		    <div id="drag_button_bar" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="350" data-default-height="30" data-category="all text">
 			    <div id="libButtonBarBox" data-default-width="250" data-default-height="20">
 				<div class="libButtonBarItemFirst">
@@ -404,7 +404,7 @@
 		    
 		    
 		    <!-- Search field -->
-		    <div id="drag_search" class="drag" draggable="true">
+		    <div id="drag_search" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libSearchBox" data-lib-width="200" data-lib-height="30">
 				<i class="icon-search icon-large icon-height"></i>
@@ -417,7 +417,7 @@
 		    
 		    <!-- Header -->
 				<!-- Section Title -->
-		    <div id="drag_section_title" class="drag" draggable="true">
+		    <div id="drag_section_title" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-category="all text">
 			    <div id="libHeaderBox">
 				<h1 class="libHeader">Section Title</h1>
@@ -429,7 +429,7 @@
 		    
 		    
 				<!-- Checkbox -->
-		    <div id="drag_checkbox" class="drag" draggable="true">
+		    <div id="drag_checkbox" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libCheckBox" data-lib-width="200" data-lib-height="30">
 				<div id="libCheckField"></div>
@@ -440,7 +440,7 @@
 		    </div>
 		    
 				<!-- Radio Button -->
-		    <div id="drag_radio_button" class="drag" draggable="true">
+		    <div id="drag_radio_button" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libRadioBox" data-lib-width="200" data-lib-height="30">
 				<div id="libRadioField">
@@ -453,7 +453,7 @@
 		    </div>
 			
 				<!-- Combo Box -->
-		    <div id="drag_combobox" class="drag" draggable="true">
+		    <div id="drag_combobox" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libComboBox" data-lib-width="200" data-lib-height="30">
 				<div id="libComboField">
@@ -467,7 +467,7 @@
 		    
 		    <!-- layout -->
 				<!-- Accordin -->
-		    <div id="drag_accordin" class="drag" draggable="true">
+		    <div id="drag_accordin" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
 			    <div id="libAccordin" data-lib-width="200" data-lib-height="150">
 				<div>Item One</div>
@@ -479,7 +479,7 @@
 			</div>
 		    </div>
 				<!-- Tab Bar -->
-		    <div id="drag_tab_bar" class="drag" draggable="true">
+		    <div id="drag_tab_bar" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libTabbar" data-lib-width="200" data-lib-height="30">
 				<ul>
@@ -494,7 +494,7 @@
 		    </div>
 				
 				<!-- Link Bar -->
-		    <div id="drag_link_bar" class="drag" draggable="true">
+		    <div id="drag_link_bar" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libLinkbar" data-lib-width="200" data-lib-height="30">
 				<span class="link">Link 1</span> | <span class="link">Link 2</span> | <span class="link">Link 3</span>
@@ -504,7 +504,7 @@
 		    </div>
 				
 				<!-- Vertical Tab -->
-		    <div id="drag_vertical_tab" class="drag" draggable="true">
+		    <div id="drag_vertical_tab" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libVerticalTab" data-lib-width="200" data-lib-height="30">
 				<div>
@@ -523,7 +523,7 @@
 		    </div>
 			
 				<!-- Table -->
-		    <div id="drag_table" class="drag" draggable="true">
+		    <div id="drag_table" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libTable" data-lib-width="200" data-lib-height="30">
 				<table>
@@ -549,7 +549,7 @@
 		    
 		    <!-- Forms Section -->
 				<!-- Text Box -->
-		    <div id="drag_text_box" class="drag" draggable="true">
+		    <div id="drag_text_box" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
 			    <div id="libTextBox" data-lib-width="100" data-lib-height="30">
 				<div id="libTextBoxContainer">
@@ -561,7 +561,7 @@
 		    </div>
 			
 				<!-- Date Picker -->
-		    <div id="drag_date_picker" class="drag" draggable="true">
+		    <div id="drag_date_picker" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
 			    <div id="libDatePickerBox" data-lib-width="100" data-lib-height="30">
 				<div id="libDatePickerContainer">
@@ -574,7 +574,7 @@
 		    </div>
 				
 				<!-- List -->
-		    <div id="drag_list" class="drag" draggable="true">
+		    <div id="drag_list" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
 			    <div id="libList" data-lib-width="150" data-lib-height="90">
 				<div id="libListContainer">
@@ -588,7 +588,7 @@
 		    </div>
 			
 				<!-- Date Stepper -->
-		    <div id="drag_date_stepper" class="drag" draggable="true">
+		    <div id="drag_date_stepper" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
 			<div id="libNumStepperContainer">
 			    3
