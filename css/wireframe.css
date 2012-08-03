@@ -67,7 +67,7 @@ section#canvas > section#pad{
 	background : #fff;
 	width : 95%;
 	height : 95%;
-	background:url(../images/grid_20px.gif);
+	background:url(../img/grid_20px.gif);
 	background-repeat:repeat;
 }
 
@@ -283,7 +283,7 @@ section#canvas > section#pad{
 	width: 100px;
 	height: 70px;
 	border: 2px solid black;
-	background: url(../images/placeholder.gif);
+	background: url(../img/placeholder.gif);
 	background-color:#EEE;
 }
 #libBrowserUrlBox {
@@ -474,13 +474,13 @@ section#canvas > section#pad{
 	font-size : 14px;
 }
 
-#libAccordin{
+#libaccordion{
 	width : 150px;
 	height : 80px;
 	border : 1px solid #333;
 }
 
-#libAccordin div{
+#libaccordion div{
 	padding : 3px 0px;
 	float : left;
 	height : 10px;
@@ -489,11 +489,11 @@ section#canvas > section#pad{
 	border-bottom : 1px solid #333;
 }
 
-#libAccordin div:last-child{
+#libaccordion div:last-child{
 	border-bottom : 0px solid #333;
 }
 
-#libAccordin .expand{
+#libaccordion .expand{
 	height : 20px;
 }
 
