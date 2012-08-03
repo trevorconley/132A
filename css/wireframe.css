@@ -681,7 +681,7 @@ section#canvas > section#pad{
 {
 	width: 100px;
 	height: 70px;
-	background-image: url("../mobile.png");
+	background-image: url("../img/mobile.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 60px 70px;
@@ -690,7 +690,7 @@ section#canvas > section#pad{
 {
 	width: 100px;
 	height: 70px;
-	background-image: url("../mobile.png");
+	background-image: url("../img/mobile.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100px 70px;
