@@ -63,8 +63,6 @@
 						</select>
 						<input type="submit" />
 					</form>
-					
-					<pre id="results"></pre>
 				<section id="canvas">
 					<section id="pad"></section>
 				</section>
@@ -157,6 +155,11 @@
 						<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all text">Add Text Box
          				</div>
 					</div>
+					
+					<div id='button' class="draggable element1">
+						<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button"><img src="images/elements/button.png" alt="button"/>
+         				</div>
+					</div>
 
 					<div id ='rectangle' class="draggable element1">
 						<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all text"><img src="images/rounded_rectangles.png" alt="button bar"/>
@@ -231,6 +234,7 @@
 			dropObject.initDrop('table');
 			dropObject.initDrop('tablet');
 			dropObject.initDrop('tabcontainer');
+			dropObject.initDrop('button');
 			
 			initPalette('palette');
 		</script>
