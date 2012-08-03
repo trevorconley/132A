@@ -21,6 +21,8 @@
 	    <script type="text/javascript">
 		//   XY Coord
 		/* addressing the wonderful world of cross-browser event handling */
+		var clicked;
+		
 		function fixE(e) { return e || window.event; }
 			
 		// Detect if the browser is IE or not.
@@ -59,8 +61,8 @@
 				document.Show.MouseX.value = position.x;
 				document.Show.MouseY.value = position.y;
 				
-				document.whxy.xCoord.value = position.x;
-				document.whxy.yCoord.value = position.y;
+				//document.whxy.xCoord.value = position.x;
+				//document.whxy.yCoord.value = position.y;
  
 			  return position;
 			}	
@@ -76,7 +78,7 @@
 		        document.getElementById("searchfield").onkeyup = function() {autoSuggest();}
 		        document.onmousedown = draggableClick;
 		        document.onmouseup = dragEnd;
-		       document.getElementById("frame").addEventListener("drop",drop,false); */
+		       //document.getElementById("frame").addEventListener("drop",drop,false); 
 			   clicked = false;
 			
 		    };
