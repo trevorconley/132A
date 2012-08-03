@@ -12,18 +12,22 @@
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
-	    <script src="js/lib/jquery-1.7.2.min.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	    <!--qtip script-->
 	    <script src="js/qtip/jquery.qtip.min.js"></script>
 	    <script src="js/script.js"></script>
 	    <script src="js/search.js"></script>
-	    <script src="js/dnd.js"></script>
 	    <script type="text/javascript">
 	    //========================================================================================//
 	    //                             XY COORD                                                   //
 	    //========================================================================================//
 		//   XY Coord //
 		/* addressing the wonderful world of cross-browser event handling */
+<<<<<<< HEAD
+=======
+		var clicked = false;
+>>>>>>> drag
 		
 		function fixE(e) { return e || window.event; }
 			
@@ -77,20 +81,34 @@
 			//========================================================================================//
 			//                             DRAG AND DROP                                              //
 			//========================================================================================//
-			/*$(function() {
-				$( ".drag" ).draggable({ revert: "invalid" });
+			var geekOps_clone;
+			$(document).ready( function() 
+			    {
+			    	// draggable function
+			    	$(".draggable").draggable(
+			    	     {
+			    	     	revert: true,
+			    	     	helper: "clone"
+			    	     }
+			    	); // end draggable
 
-				$( "#canvasGrid" ).droppable({
-					activeClass: "ui-state-hover",
-					hoverClass: "ui-state-active",
-					drop: function( event, ui ) {
-						$( this )
-							.addClass( "ui-state-highlight" )
-							.find( "p" )
-								.html( "Dropped!" );
-					}
-				});
-			});*/
+                    // droppable funtion
+			    	$("#canvasGrid").droppable(
+			    	    {
+			    	    	accept: ".draggable",
+			    	    	
+			    	    	// deals with what happens on drop
+			    	    	drop: function(e, ui)
+			    	    	{
+			    	    		var dropElemId = ui.draggable.attr("id");
+			    	    		var dropElem = ui.draggable.html();
+			    	    		geekOps_clone = $(dropElem).clone();
+			    	    		$("canvasGrid").append(dropElem);
+			    	    	} // end drop function
+			    	    }
+			    	); // end droppable
+			    }
+			); // end ready
 
 			//========================================================================================//
 			//                             ON LOAD FUNCTION                                           //
@@ -296,7 +314,7 @@
 		    
 		 <!-- button -->
 		    <div id="drag_button" class="draggable element1 drag" draggable="true">		
-			<div class="resizeable" data-default-width="108" data-default-height="20" data-category="all button">
+			<div class="dnd resizeable" data-default-width="108" data-default-height="20" data-category="all button">
 			    <div id="sbtn" data-lib-width="108" data-lib-height="20">
 				<span class="sbtntext">Button Text</span>
 			    </div>
@@ -307,7 +325,7 @@
 		    
 		    <!-- browser -->
 		    <div id="drag_browser" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
+			<div class="dnd resizeable" data-default-width="760" data-default-height="350" data-category="all device">
 			    <div id="libBrowserOuterFrame" data-lib-width="760" data-lib-height="350">
 				<div id="libBrowserHeader">
 				    <i class="icon-caret-left"></i>
@@ -325,7 +343,7 @@
             
             <!-- Mobile -->
             <div id="drag_mobile" class="draggable element1 drag" draggable="true">
-            <div class="resizeable" data-default-width="150" data-default-height="150" data-category="all device">
+            <div class="dnd resizeable" data-default-width="150" data-default-height="150" data-category="all device">
             	<img src="mobile.png" alt="mobile">
                 <div class="title">Mobile</div>
             </div>
@@ -333,7 +351,7 @@
 
              <!-- Tablet -->
              <div id="drag_tablet" class="draggable element1 drag" draggable="true">
-             <div class="resizeable" data-default-width="150" data-default-height="150" data-category="all device">
+             <div class="dnd resizeable" data-default-width="150" data-default-height="150" data-category="all device">
 
                  <div class="title">Tablet</div>
              </div>
@@ -342,7 +360,7 @@
 		        <!-- menu -->
 		    		<!-- Format Bar -->
 		        <div id="drag_format_bar" class="draggable element1 drag" draggable="true">
-		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all text">
+		    	<div class="dnd resizeable" data-default-width="500" data-default-height="30" data-category="all text">
 		    	    <div id="libFormatBar" data-lib-width="500" data-lib-height="30">
 		    		<div>
 		    		    <i class="icon-bold"></i>
@@ -362,7 +380,7 @@
 		    		
 		    		<!-- Menu -->
 		        <div id="drag_menu" class="draggable element1 drag" draggable="true">
-		    	<div class="resizeable" data-default-width="500" data-default-height="30" data-category="all layout">
+		    	<div class="dnd resizeable" data-default-width="500" data-default-height="30" data-category="all layout">
 		    	    <div id="libMenu" data-lib-width="500" data-lib-height="30">
 		    		<div>
 		    		    <div></div><div>Open</div><div></div>
@@ -377,7 +395,7 @@
 		    
 		    <!-- image -->
 		    <div id="drag_image" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="150" data-default-height="150" data-category="all image">
+			<div class="dnd resizeable" data-default-width="150" data-default-height="150" data-category="all image">
 			    <div id="libImage" data-lib-width="150" data-lib-height="150">
 				
 			    </div>
@@ -387,7 +405,7 @@
 		    
 		    <!-- text area -->
 		    <div id="drag_textfield" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all text">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="150" data-category="all text">
 			    <div id="libDummyContainer" data-lib-width="200" data-lib-height="150">
 				<div> <!-- id="libDummyText"> --> <!-- removed so we can have only the text area show -->
 				    <textarea id="lilDummyText" contenteditable"true" placeholder="Add your text here" spellcheck="true" cols="30" rows="5"></textarea>
@@ -399,7 +417,7 @@
 		    
 		    <!-- button bar -->
 		    <div id="drag_button_bar" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="350" data-default-height="30" data-category="all text">
+			<div class="dnd resizeable" data-default-width="350" data-default-height="30" data-category="all text">
 			    <div id="libButtonBarBox" data-default-width="250" data-default-height="20">
 				<div class="libButtonBarItemFirst">
 				    Item1
@@ -421,7 +439,7 @@
 		    
 		    <!-- Search field -->
 		    <div id="drag_search" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libSearchBox" data-lib-width="200" data-lib-height="30">
 				<i class="icon-search icon-large icon-height"></i>
 				<div id="libSearchField"></div>
@@ -434,7 +452,7 @@
 		    <!-- Header -->
 				<!-- Section Title -->
 		    <div id="drag_section_title" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-category="all text">
+			<div class="dnd resizeable" data-category="all text">
 			    <div id="libHeaderBox">
 				<h1 class="libHeader">Section Title</h1>
 			    </div>
@@ -446,7 +464,7 @@
 		    
 				<!-- Checkbox -->
 		    <div id="drag_checkbox" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libCheckBox" data-lib-width="200" data-lib-height="30">
 				<div id="libCheckField"></div>
 				<span>Checkbox</span>
@@ -457,7 +475,7 @@
 		    
 				<!-- Radio Button -->
 		    <div id="drag_radio_button" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libRadioBox" data-lib-width="200" data-lib-height="30">
 				<div id="libRadioField">
 				    <div><input type="radio"></div>
@@ -470,7 +488,7 @@
 			
 				<!-- Combo Box -->
 		    <div id="drag_combobox" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all button">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all button">
 			    <div id="libComboBox" data-lib-width="200" data-lib-height="30">
 				<div id="libComboField">
 				    <div>ComboBox</div>
@@ -482,10 +500,17 @@
 		    </div>
 		    
 		    <!-- layout -->
+<<<<<<< HEAD
 				<!-- accordion -->
 		    <div id="drag_accordion" class="draggable element1 drag" draggable="true">
 			<div class="resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
 			    <div id="libaccordion" data-lib-width="200" data-lib-height="150">
+=======
+				<!-- Accordin -->
+		    <div id="drag_accordin" class="draggable element1 drag" draggable="true">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="150" data-category="all layout">
+			    <div id="libAccordin" data-lib-width="200" data-lib-height="150">
+>>>>>>> drag
 				<div>Item One</div>
 				<div class="expand"></div>
 				<div>Item Two</div>
@@ -496,7 +521,7 @@
 		    </div>
 				<!-- Tab Bar -->
 		    <div id="drag_tab_bar" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libTabbar" data-lib-width="200" data-lib-height="30">
 				<ul>
 				    <li>Tab 1</li>
@@ -511,7 +536,7 @@
 				
 				<!-- Link Bar -->
 		    <div id="drag_link_bar" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			<div class="draggble resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libLinkbar" data-lib-width="200" data-lib-height="30">
 				<span class="link">Link 1</span> | <span class="link">Link 2</span> | <span class="link">Link 3</span>
 			    </div>
@@ -521,7 +546,7 @@
 				
 				<!-- Vertical Tab -->
 		    <div id="drag_vertical_tab" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libVerticalTab" data-lib-width="200" data-lib-height="30">
 				<div>
 				    <ul>
@@ -540,7 +565,7 @@
 			
 				<!-- Table -->
 		    <div id="drag_table" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
+			<div class="dnd resizeable" data-default-width="200" data-default-height="30" data-category="all layout">
 			    <div id="libTable" data-lib-width="200" data-lib-height="30">
 				<table>
 				    <tr>
@@ -566,7 +591,7 @@
 		    <!-- Forms Section -->
 				<!-- Text Box -->
 		    <div id="drag_text_box" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
+			<div class="dnd resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
 			    <div id="libTextBox" data-lib-width="100" data-lib-height="30">
 				<div id="libTextBoxContainer">
 				    Text Box
@@ -578,7 +603,7 @@
 			
 				<!-- Date Picker -->
 		    <div id="drag_date_picker" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
+			<div class="dnd resizeable" data-default-width="100" data-default-height="30" data-category="all forms">
 			    <div id="libDatePickerBox" data-lib-width="100" data-lib-height="30">
 				<div id="libDatePickerContainer">
 				    12/1/2012
@@ -591,7 +616,7 @@
 				
 				<!-- List -->
 		    <div id="drag_list" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
+			<div class="dnd resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
 			    <div id="libList" data-lib-width="150" data-lib-height="90">
 				<div id="libListContainer">
 				    Item One <br />
@@ -605,7 +630,7 @@
 			
 				<!-- Date Stepper -->
 		    <div id="drag_date_stepper" class="draggable element1 drag" draggable="true">
-			<div class="resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
+			<div class="dnd resizeable" data-default-width="150" data-default-height="100" data-category="all forms">
 			<div id="libNumStepperContainer">
 			    3
 			    <i class="icon-sort" style="padding-left:5px"></i>
