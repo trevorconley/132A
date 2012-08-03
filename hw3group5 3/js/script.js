@@ -1,3 +1,34 @@
+		var gridToggled = false;
+		var attToggled = false;
+		
+		function toggleGrid() 
+		    {
+			var toggle = document.getElementById('pad');
+			
+			if (gridToggled) {
+			    gridToggled = false;
+			    toggle.style.background = "white";
+			}
+			else {
+				toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
+				gridToggled = true;
+			}
+		    }
+		    
+		function toggleAttributes() 
+		    {
+			var toggle = document.getElementById('palette');
+			
+			if (attToggled) {
+			    attToggled = false;
+			    toggle.style.display = 'inline';
+			}
+			else {
+				toggle.style.display = 'none';
+				attToggled = true;
+			}
+		    }
+		
 		$(document).ready(function(){
 			
 			//library tabs register
