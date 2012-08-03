@@ -19,7 +19,10 @@
 	    <script src="js/search.js"></script>
 	    <script src="js/dnd.js"></script>
 	    <script type="text/javascript">
-		//   XY Coord
+	    //========================================================================================//
+	    //                             XY COORD                                                   //
+	    //========================================================================================//
+		//   XY Coord //
 		/* addressing the wonderful world of cross-browser event handling */
 		var clicked;
 		
@@ -61,8 +64,13 @@
 				document.Show.MouseX.value = position.x;
 				document.Show.MouseY.value = position.y;
 				
+
+				document.getElementById("whxy").xCoord.value = position.x;
+				document.getElementById("whxy").yCoord.value = position.y;
+
 				//document.whxy.xCoord.value = position.x;
 				//document.whxy.yCoord.value = position.y;
+
  
 			  return position;
 			}	
@@ -70,19 +78,43 @@
 			//========================================================================================//
 			//                             DRAG AND DROP                                              //
 			//========================================================================================//
-		    
-		    
+			$(function() {
+				$( ".drag" ).draggable({ revert: "invalid" });
+
+				$( "#canvasGrid" ).droppable({
+					activeClass: "ui-state-hover",
+					hoverClass: "ui-state-active",
+					drop: function( event, ui ) {
+						$( this )
+							.addClass( "ui-state-highlight" )
+							.find( "p" )
+								.html( "Dropped!" );
+					}
+				});
+			});
+
+			//========================================================================================//
+			//                             ON LOAD FUNCTION                                           //
+			//========================================================================================//
 			//  On Load function 
-		    window.onload = function () 
+		  /* window.onload = function () 
 		    { 
+		        //document.getElementById("searchfield").onkeyup = function() {autoSuggest();
+
+			    clicked = false;
+
 		        document.getElementById("searchfield").onkeyup = function() {autoSuggest();}
 		        document.onmousedown = draggableClick;
 		        document.onmouseup = dragEnd;
 		       //document.getElementById("frame").addEventListener("drop",drop,false); 
 			   clicked = false;
+
 			
-		    };
+		    }; */
 			
+		    //========================================================================================//
+		    //                             TOGGLE                                                     //
+		    //========================================================================================//
 			//   Trevor's Stuff
 			function addRecent(e)
 		    {
@@ -105,7 +137,7 @@
 			    toggle.style.backgroundImage = "url('./images/grid_20px.gif')";
 			    clicked = true;
 			}
-		    }
+		    } 
 			
 		    </script>
     </head>
@@ -258,7 +290,6 @@
 		    
 		    
 		    <!-- browser -->
-		 <div class="drag">
 		    <div id="drag_browser" class="drag" draggable="true">
 			<div class="resizeable" data-default-width="760" data-default-height="350" data-category="all device">
 			    <div id="libBrowserOuterFrame" data-lib-width="760" data-lib-height="350">
@@ -274,13 +305,12 @@
 			    <div class="title">Browser</div>
 			</div>
 		    </div>
-		 </div>
 
             
             <!-- Mobile -->
             <div id="drag_mobile" class="drag" draggable="true">
             <div class="resizeable" data-default-width="150" data-default-height="150" data-category="all device">
-            	<img src="mobile.png" class="drag" alt="mobile">
+            	<img src="mobile.png" alt="mobile">
                 <div class="title">Mobile</div>
             </div>
               </div>
