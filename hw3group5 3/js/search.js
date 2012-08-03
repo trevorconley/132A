@@ -1,8 +1,8 @@
         var recent = [];
 
-        var componentsArray = ['button', 'image', 'textbox', 'buttonbar', 'search',
-			       'section', 'accordion', 'tabcontainer', 'verticaltab', 'table',
-			       'rectable', 'horizontaltab', 'datepicker', 'tablet', 'tabbar'];
+        var componentsArray = ["button", "image", "textbox", "buttonbar", "search",
+			       "section", "accordion", "tabcontainer", "verticaltab", "table",
+			       "rectable", "horizontaltab", "datepicker", "tablet", "tabbar"];
 
         var associatedDivIds = new Array();
         associatedDivIds["button"] = "button";
